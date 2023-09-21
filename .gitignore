@@ -1,0 +1,7 @@
+output
+FortranAS/src/generated
+build
+**a.out
+source
+.idea
+tools/graphviz

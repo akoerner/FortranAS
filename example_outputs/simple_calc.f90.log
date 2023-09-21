@@ -1,0 +1,2474 @@
+Fortran source file: /tmp/src/simple_calc.f90
+ USING: Lexer: AbstractFortran90Lexer
+ USING: Parser: Fortran90Parser
+  Token start number: 0
+  Token end number: 72
+  Tokens:
+    Token: program Type: 5
+    Token:   Type: 119
+    Token: addition Type: 188
+    Token: \n     Type: 119
+    Token: implicit Type: 41
+    Token:   Type: 119
+    Token: none Type: 42
+    Token: \n\n     Type: 119
+    Token: integer Type: 168
+    Token:   Type: 119
+    Token: :: Type: 30
+    Token:   Type: 119
+    Token: a Type: 188
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: b Type: 188
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: result Type: 55
+    Token: \n\n     Type: 119
+    Token: a Type: 188
+    Token:   Type: 119
+    Token: = Type: 130
+    Token:   Type: 119
+    Token: 1 Type: 186
+    Token: \n     Type: 119
+    Token: b Type: 188
+    Token:   Type: 119
+    Token: = Type: 130
+    Token:   Type: 119
+    Token: 3 Type: 186
+    Token: \n\n     Type: 119
+    Token: result Type: 55
+    Token:   Type: 119
+    Token: = Type: 130
+    Token:   Type: 119
+    Token: a Type: 188
+    Token:   Type: 119
+    Token: + Type: 132
+    Token:   Type: 119
+    Token: b Type: 188
+    Token: \n\n     Type: 119
+    Token: write Type: 72
+    Token: ( Type: 123
+    Token: * Type: 192
+    Token: , Type: 122
+    Token: * Type: 192
+    Token: ) Type: 128
+    Token:   Type: 119
+    Token: "The sum of" Type: 177
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: a Type: 188
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: "and" Type: 177
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: b Type: 188
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: "is" Type: 177
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: result Type: 55
+    Token: \n\n Type: 119
+    Token: end Type: 12
+    Token:   Type: 119
+    Token: program Type: 5
+    Token:   Type: 119
+    Token: addition Type: 188
+    Token: \n Type: 119
+    Token: <EOF> Type: -1
+
+  Parse tree JSON string:
+    {
+  "name": "ProgramContext",
+  "text": "programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition<EOF>",
+  "children": [
+    {
+      "name": "ExecutableProgramContext",
+      "text": "programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition",
+      "children": [
+        {
+          "name": "ProgramUnitContext",
+          "text": "programaddition",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "programaddition",
+              "children": [
+                {
+                  "name": "ProgramStmtContext",
+                  "text": "programaddition",
+                  "children": [
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "program",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "addition",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "implicitnone",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "implicitnone",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "implicitnone",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "implicit",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "none",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "integer::",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "integer::",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "integer::",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "integer",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "::",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a,",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a,",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a,",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b,result",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b,result",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b,result",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "result",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a=",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a=",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a=",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "=",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "1",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "1",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "1",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "1",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b=",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b=",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b=",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "=",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "3result=",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "3result=",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "3result=",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "3",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "result",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "=",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a+",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a+",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a+",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "+",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "write(*,*)\"The sum of\",",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "write(*,*)\"The sum of\",",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "write(*,*)\"The sum of\",",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "write",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "(",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "*",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "*",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ")",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "\"The sum of\"",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a,\"and\",",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a,\"and\",",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a,\"and\",",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "\"and\"",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b,\"is\",result",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b,\"is\",result",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b,\"is\",result",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "\"is\"",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "result",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "endprogramaddition",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "endprogramaddition",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "endprogramaddition",
+                  "children": [
+                    {
+                      "name": "EndProgramStmtContext",
+                      "text": "endprogramaddition",
+                      "children": [
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "end",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "program",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "addition",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TerminalNodeImpl",
+      "text": "<EOF>",
+      "children": [
+      ]
+    }
+  ]
+}
+
+  Abstract syntax tree JSON string:
+    {
+  "name": "ProgramContext",
+  "text": "programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition<EOF>",
+  "children": [
+    {
+      "name": "ExecutableProgramContext",
+      "text": "programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition",
+      "children": [
+        {
+          "name": "ProgramUnitContext",
+          "text": "programaddition",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "programaddition",
+              "children": [
+                {
+                  "name": "ProgramStmtContext",
+                  "text": "programaddition",
+                  "children": [
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "program",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "addition",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "implicitnone",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "implicitnone",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "implicitnone",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "implicit",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "none",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "integer::",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "integer::",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "integer::",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "integer",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "::",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a,",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a,",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a,",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b,result",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b,result",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b,result",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "result",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a=",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a=",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a=",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "=",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "1",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "1",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "1",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "1",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b=",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b=",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b=",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "=",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "3result=",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "3result=",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "3result=",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "3",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "result",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "=",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a+",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a+",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a+",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "+",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "write(*,*)\"The sum of\",",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "write(*,*)\"The sum of\",",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "write(*,*)\"The sum of\",",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "write",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "(",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "*",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "*",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ")",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "\"The sum of\"",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "a,\"and\",",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "a,\"and\",",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "a,\"and\",",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "a",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "\"and\"",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "b,\"is\",result",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "b,\"is\",result",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "b,\"is\",result",
+                  "children": [
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "b",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "\"is\"",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": ",",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "ErrorNodeImpl",
+                      "text": "result",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ProgramUnitContext",
+          "text": "endprogramaddition",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "endprogramaddition",
+              "children": [
+                {
+                  "name": "MainRangeContext",
+                  "text": "endprogramaddition",
+                  "children": [
+                    {
+                      "name": "EndProgramStmtContext",
+                      "text": "endprogramaddition",
+                      "children": [
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "end",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "program",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "addition",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TerminalNodeImpl",
+      "text": "<EOF>",
+      "children": [
+      ]
+    }
+  ]
+}
+
+  Parse tree DOT string:
+    strict digraph ParseTree {
+  node [shape=box];
+"0" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition<EOF> \n\lToken Count:: \n72 \n\lToken Range:: \n0 - 72 \n\lLine Count:: \n13 \n\lLine Range:: \n1 - 14 \n\lSource Code:: \nprogram addition
+    implicit none
+
+    integer :: a, b, result
+
+    a = 1
+    b = 3
+
+    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"0" -> "1" 
+"1" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition \n\lToken Count:: \n70 \n\lToken Range:: \n0 - 70 \n\lLine Count:: \n12 \n\lLine Range:: \n1 - 13 \n\lSource Code:: \nprogram addition
+    implicit none
+
+    integer :: a, b, result
+
+    a = 1
+    b = 3
+
+    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"1" -> "2" 
+"2" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramaddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"2" -> "3" 
+"3" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramaddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"3" -> "4" 
+"4" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramaddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"4" -> "5" 
+"5" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"4" -> "6" 
+"6" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \naddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"3" -> "7" 
+"7" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n4 - 3 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"1" -> "8" 
+"8" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"8" -> "9" 
+"9" [label="\lRule:: \nMainProgramContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"9" -> "10" 
+"10" [label="\lRule:: \nMainRangeContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"10" -> "11" 
+"11" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nimplicit \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"10" -> "12" 
+"12" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"1" -> "13" 
+"13" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n8 - 7 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"13" -> "14" 
+"14" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n8 - 7 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"14" -> "15" 
+"15" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n8 - 7 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"1" -> "16" 
+"16" [label="\lRule:: \nProgramUnitContext \n\lValue:: \ninteger:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"16" -> "17" 
+"17" [label="\lRule:: \nMainProgramContext \n\lValue:: \ninteger:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"17" -> "18" 
+"18" [label="\lRule:: \nMainRangeContext \n\lValue:: \ninteger:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"18" -> "19" 
+"19" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \ninteger \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"18" -> "20" 
+"20" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"1" -> "21" 
+"21" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n12 - 11 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"21" -> "22" 
+"22" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n12 - 11 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"22" -> "23" 
+"23" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n12 - 11 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1" -> "24" 
+"24" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"24" -> "25" 
+"25" [label="\lRule:: \nMainProgramContext \n\lValue:: \na, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"25" -> "26" 
+"26" [label="\lRule:: \nMainRangeContext \n\lValue:: \na, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"26" -> "27" 
+"27" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"26" -> "28" 
+"28" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1" -> "29" 
+"29" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n15 - 14 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"29" -> "30" 
+"30" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n15 - 14 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"30" -> "31" 
+"31" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n15 - 14 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1" -> "32" 
+"32" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb,result \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"32" -> "33" 
+"33" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb,result \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"33" -> "34" 
+"34" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb,result \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"34" -> "35" 
+"35" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"34" -> "36" 
+"36" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"34" -> "37" 
+"37" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nresult \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1" -> "38" 
+"38" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n20 - 19 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"38" -> "39" 
+"39" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n20 - 19 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"39" -> "40" 
+"40" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n20 - 19 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1" -> "41" 
+"41" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"41" -> "42" 
+"42" [label="\lRule:: \nMainProgramContext \n\lValue:: \na= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"42" -> "43" 
+"43" [label="\lRule:: \nMainRangeContext \n\lValue:: \na= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"43" -> "44" 
+"44" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"43" -> "45" 
+"45" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"1" -> "46" 
+"46" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n24 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"46" -> "47" 
+"47" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n24 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"47" -> "48" 
+"48" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n24 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"1" -> "49" 
+"49" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"49" -> "50" 
+"50" [label="\lRule:: \nMainProgramContext \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"50" -> "51" 
+"51" [label="\lRule:: \nMainRangeContext \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"51" -> "52" 
+"52" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"1" -> "53" 
+"53" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"53" -> "54" 
+"54" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"54" -> "55" 
+"55" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"55" -> "56" 
+"56" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"55" -> "57" 
+"57" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"1" -> "58" 
+"58" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n30 - 29 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    b = 3
+ \n"] 
+"58" -> "59" 
+"59" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n30 - 29 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    b = 3
+ \n"] 
+"59" -> "60" 
+"60" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n30 - 29 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    b = 3
+ \n"] 
+"1" -> "61" 
+"61" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n3result= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"61" -> "62" 
+"62" [label="\lRule:: \nMainProgramContext \n\lValue:: \n3result= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"62" -> "63" 
+"63" [label="\lRule:: \nMainRangeContext \n\lValue:: \n3result= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"63" -> "64" 
+"64" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n3 \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"63" -> "65" 
+"65" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nresult \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"63" -> "66" 
+"66" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"1" -> "67" 
+"67" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n36 - 35 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"67" -> "68" 
+"68" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n36 - 35 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"68" -> "69" 
+"69" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n36 - 35 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"1" -> "70" 
+"70" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"70" -> "71" 
+"71" [label="\lRule:: \nMainProgramContext \n\lValue:: \na+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"71" -> "72" 
+"72" [label="\lRule:: \nMainRangeContext \n\lValue:: \na+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"72" -> "73" 
+"73" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"72" -> "74" 
+"74" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"1" -> "75" 
+"75" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n40 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"75" -> "76" 
+"76" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n40 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"76" -> "77" 
+"77" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n40 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"1" -> "78" 
+"78" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"78" -> "79" 
+"79" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"79" -> "80" 
+"80" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"80" -> "81" 
+"81" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"1" -> "82" 
+"82" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nwrite(*,*)\"The sum of\", \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"82" -> "83" 
+"83" [label="\lRule:: \nMainProgramContext \n\lValue:: \nwrite(*,*)\"The sum of\", \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"83" -> "84" 
+"84" [label="\lRule:: \nMainRangeContext \n\lValue:: \nwrite(*,*)\"The sum of\", \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "85" 
+"85" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nwrite \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "86" 
+"86" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n( \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "87" 
+"87" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n* \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "88" 
+"88" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "89" 
+"89" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n* \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "90" 
+"90" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n) \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "91" 
+"91" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n\"The sum of\" \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"84" -> "92" 
+"92" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"1" -> "93" 
+"93" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n52 - 51 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"93" -> "94" 
+"94" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n52 - 51 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"94" -> "95" 
+"95" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n52 - 51 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"1" -> "96" 
+"96" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na,\"and\", \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"96" -> "97" 
+"97" [label="\lRule:: \nMainProgramContext \n\lValue:: \na,\"and\", \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"97" -> "98" 
+"98" [label="\lRule:: \nMainRangeContext \n\lValue:: \na,\"and\", \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"98" -> "99" 
+"99" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"98" -> "100" 
+"100" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"98" -> "101" 
+"101" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n\"and\" \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"98" -> "102" 
+"102" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"1" -> "103" 
+"103" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n58 - 57 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"103" -> "104" 
+"104" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n58 - 57 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"104" -> "105" 
+"105" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n58 - 57 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"1" -> "106" 
+"106" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb,\"is\",result \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"106" -> "107" 
+"107" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb,\"is\",result \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"107" -> "108" 
+"108" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb,\"is\",result \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"108" -> "109" 
+"109" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"108" -> "110" 
+"110" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"108" -> "111" 
+"111" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n\"is\" \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"108" -> "112" 
+"112" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"108" -> "113" 
+"113" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nresult \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"1" -> "114" 
+"114" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"114" -> "115" 
+"115" [label="\lRule:: \nMainProgramContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"115" -> "116" 
+"116" [label="\lRule:: \nMainRangeContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"116" -> "117" 
+"117" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"117" -> "118" 
+"118" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"117" -> "119" 
+"119" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"117" -> "120" 
+"120" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \naddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"0" -> "121" 
+"121" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n72 \n\lToken Range:: \n0 - 72 \n\lLine Count:: \n13 \n\lLine Range:: \n1 - 14 \n\lSource Code:: \nprogram addition
+    implicit none
+
+    integer :: a, b, result
+
+    a = 1
+    b = 3
+
+    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+}
+
+
+  Abstract syntax tree DOT string:
+    strict digraph ParseTree {
+  node [shape=box];
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition<EOF>072" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition<EOF> \n\lToken Count:: \n72 \n\lToken Range:: \n0 - 72 \n\lLine Count:: \n13 \n\lLine Range:: \n1 - 14 \n\lSource Code:: \nprogram addition
+    implicit none
+
+    integer :: a, b, result
+
+    a = 1
+    b = 3
+
+    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition<EOF>072" -> "programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)\"The sum of\",a,\"and\",b,\"is\",resultendprogramaddition \n\lToken Count:: \n70 \n\lToken Range:: \n0 - 70 \n\lLine Count:: \n12 \n\lLine Range:: \n1 - 13 \n\lSource Code:: \nprogram addition
+    implicit none
+
+    integer :: a, b, result
+
+    a = 1
+    b = 3
+
+    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "programaddition02" 
+"programaddition02" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramaddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"programaddition02" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramaddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"programaddition02" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramaddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"programaddition02" -> "program02" 
+"program02" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"programaddition02" -> "addition02" 
+"addition02" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \naddition \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"programaddition02" -> "43" 
+"43" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n4 - 3 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram addition
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "implicitnone46" 
+"implicitnone46" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"implicitnone46" [label="\lRule:: \nMainProgramContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"implicitnone46" [label="\lRule:: \nMainRangeContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"implicitnone46" -> "implicit46" 
+"implicit46" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nimplicit \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"implicitnone46" -> "none46" 
+"none46" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram addition
+    implicit none
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "87" 
+"87" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n8 - 7 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"87" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n8 - 7 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"87" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n8 - 7 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "integer::810" 
+"integer::810" [label="\lRule:: \nProgramUnitContext \n\lValue:: \ninteger:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"integer::810" [label="\lRule:: \nMainProgramContext \n\lValue:: \ninteger:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"integer::810" [label="\lRule:: \nMainRangeContext \n\lValue:: \ninteger:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"integer::810" -> "integer810" 
+"integer810" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \ninteger \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"integer::810" -> "::810" 
+"::810" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n:: \n\lToken Count:: \n2 \n\lToken Range:: \n8 - 10 \n\lLine Count:: \n2 \n\lLine Range:: \n2 - 4 \n\lSource Code:: \n    implicit none
+
+    integer :: a, b, result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "1211" 
+"1211" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n12 - 11 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1211" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n12 - 11 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1211" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n12 - 11 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "a,1213" 
+"a,1213" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"a,1213" [label="\lRule:: \nMainProgramContext \n\lValue:: \na, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"a,1213" [label="\lRule:: \nMainRangeContext \n\lValue:: \na, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"a,1213" -> "a1213" 
+"a1213" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"a,1213" -> ",1213" 
+",1213" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n1 \n\lToken Range:: \n12 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "1514" 
+"1514" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n15 - 14 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1514" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n15 - 14 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"1514" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n15 - 14 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "b,result1518" 
+"b,result1518" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb,result \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"b,result1518" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb,result \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"b,result1518" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb,result \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"b,result1518" -> "b1518" 
+"b1518" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"b,result1518" -> ",1518" 
+",1518" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"b,result1518" -> "result1518" 
+"result1518" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nresult \n\lToken Count:: \n3 \n\lToken Range:: \n15 - 18 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "2019" 
+"2019" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n20 - 19 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"2019" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n20 - 19 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"2019" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n20 - 19 \n\lLine Count:: \n0 \n\lLine Range:: \n4 - 4 \n\lSource Code:: \n    integer :: a, b, result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "a=2022" 
+"a=2022" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"a=2022" [label="\lRule:: \nMainProgramContext \n\lValue:: \na= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"a=2022" [label="\lRule:: \nMainRangeContext \n\lValue:: \na= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"a=2022" -> "a2022" 
+"a2022" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"a=2022" -> "=2022" 
+"=2022" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n= \n\lToken Count:: \n2 \n\lToken Range:: \n20 - 22 \n\lLine Count:: \n2 \n\lLine Range:: \n4 - 6 \n\lSource Code:: \n    integer :: a, b, result
+
+    a = 1
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "2423" 
+"2423" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n24 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"2423" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n24 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"2423" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n24 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "12424" 
+"12424" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"12424" [label="\lRule:: \nMainProgramContext \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"12424" [label="\lRule:: \nMainRangeContext \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"12424" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n1 \n\lToken Count:: \n0 \n\lToken Range:: \n24 - 24 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n    a = 1
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "b=2628" 
+"b=2628" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"b=2628" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"b=2628" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"b=2628" -> "b2628" 
+"b2628" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"b=2628" -> "=2628" 
+"=2628" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n= \n\lToken Count:: \n2 \n\lToken Range:: \n26 - 28 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n    a = 1
+    b = 3
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "3029" 
+"3029" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n30 - 29 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    b = 3
+ \n"] 
+"3029" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n30 - 29 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    b = 3
+ \n"] 
+"3029" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n30 - 29 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    b = 3
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "3result=3034" 
+"3result=3034" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n3result= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"3result=3034" [label="\lRule:: \nMainProgramContext \n\lValue:: \n3result= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"3result=3034" [label="\lRule:: \nMainRangeContext \n\lValue:: \n3result= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"3result=3034" -> "33034" 
+"33034" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n3 \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"3result=3034" -> "result3034" 
+"result3034" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nresult \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"3result=3034" -> "=3034" 
+"=3034" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n= \n\lToken Count:: \n4 \n\lToken Range:: \n30 - 34 \n\lLine Count:: \n2 \n\lLine Range:: \n7 - 9 \n\lSource Code:: \n    b = 3
+
+    result = a + b
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "3635" 
+"3635" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n36 - 35 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"3635" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n36 - 35 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"3635" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n36 - 35 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "a+3638" 
+"a+3638" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"a+3638" [label="\lRule:: \nMainProgramContext \n\lValue:: \na+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"a+3638" [label="\lRule:: \nMainRangeContext \n\lValue:: \na+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"a+3638" -> "a3638" 
+"a3638" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"a+3638" -> "+3638" 
+"+3638" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n+ \n\lToken Count:: \n2 \n\lToken Range:: \n36 - 38 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "4039" 
+"4039" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n40 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"4039" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n40 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"4039" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n40 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "b4040" 
+"b4040" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"b4040" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"b4040" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"b4040" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n0 \n\lToken Range:: \n40 - 40 \n\lLine Count:: \n0 \n\lLine Range:: \n9 - 9 \n\lSource Code:: \n    result = a + b
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "write(*,*)"The sum of",4250" 
+"write(*,*)"The sum of",4250" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nwrite(*,*)\"The sum of\", \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" [label="\lRule:: \nMainProgramContext \n\lValue:: \nwrite(*,*)\"The sum of\", \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" [label="\lRule:: \nMainRangeContext \n\lValue:: \nwrite(*,*)\"The sum of\", \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> "write4250" 
+"write4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nwrite \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> "(4250" 
+"(4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n( \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> "*4250" 
+"*4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n* \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> ",4250" 
+",4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> "*4250" 
+"*4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n* \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> ")4250" 
+")4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n) \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> ""The sum of"4250" 
+""The sum of"4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n\"The sum of\" \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"write(*,*)"The sum of",4250" -> ",4250" 
+",4250" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n8 \n\lToken Range:: \n42 - 50 \n\lLine Count:: \n2 \n\lLine Range:: \n9 - 11 \n\lSource Code:: \n    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "5251" 
+"5251" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n52 - 51 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"5251" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n52 - 51 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"5251" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n52 - 51 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "a,"and",5256" 
+"a,"and",5256" [label="\lRule:: \nProgramUnitContext \n\lValue:: \na,\"and\", \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"a,"and",5256" [label="\lRule:: \nMainProgramContext \n\lValue:: \na,\"and\", \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"a,"and",5256" [label="\lRule:: \nMainRangeContext \n\lValue:: \na,\"and\", \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"a,"and",5256" -> "a5256" 
+"a5256" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \na \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"a,"and",5256" -> ",5256" 
+",5256" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"a,"and",5256" -> ""and"5256" 
+""and"5256" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n\"and\" \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"a,"and",5256" -> ",5256" 
+",5256" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n4 \n\lToken Range:: \n52 - 56 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "5857" 
+"5857" [label="\lRule:: \nProgramUnitContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n58 - 57 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"5857" [label="\lRule:: \nMainProgramContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n58 - 57 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"5857" [label="\lRule:: \nMainRangeContext \n\lValue:: \n \n\lToken Count:: \n-1 \n\lToken Range:: \n58 - 57 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "b,"is",result5864" 
+"b,"is",result5864" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nb,\"is\",result \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" [label="\lRule:: \nMainProgramContext \n\lValue:: \nb,\"is\",result \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" [label="\lRule:: \nMainRangeContext \n\lValue:: \nb,\"is\",result \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" -> "b5864" 
+"b5864" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nb \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" -> ",5864" 
+",5864" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" -> ""is"5864" 
+""is"5864" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n\"is\" \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" -> ",5864" 
+",5864" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \n, \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"b,"is",result5864" -> "result5864" 
+"result5864" [label="\lRule:: \nErrorNodeImpl \n\lValue:: \nresult \n\lToken Count:: \n6 \n\lToken Range:: \n58 - 64 \n\lLine Count:: \n0 \n\lLine Range:: \n11 - 11 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition070" -> "endprogramaddition6670" 
+"endprogramaddition6670" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"endprogramaddition6670" [label="\lRule:: \nMainProgramContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"endprogramaddition6670" [label="\lRule:: \nMainRangeContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"endprogramaddition6670" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramaddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"endprogramaddition6670" -> "end6670" 
+"end6670" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"endprogramaddition6670" -> "program6670" 
+"program6670" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"endprogramaddition6670" -> "addition6670" 
+"addition6670" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \naddition \n\lToken Count:: \n4 \n\lToken Range:: \n66 - 70 \n\lLine Count:: \n2 \n\lLine Range:: \n11 - 13 \n\lSource Code:: \n    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+"programadditionimplicitnoneinteger::a,b,resulta=1b=3result=a+bwrite(*,*)"The sum of",a,"and",b,"is",resultendprogramaddition<EOF>072" -> "<EOF>072" 
+"<EOF>072" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n72 \n\lToken Range:: \n0 - 72 \n\lLine Count:: \n13 \n\lLine Range:: \n1 - 14 \n\lSource Code:: \nprogram addition
+    implicit none
+
+    integer :: a, b, result
+
+    a = 1
+    b = 3
+
+    result = a + b
+
+    write(*,*) "The sum of", a, "and", b, "is", result
+
+end program addition
+ \n"] 
+}
+
+
+  Tokens JSON:
+    {"tokens":[{"type":5,"text":"program","start":0,"stop":6},{"type":119,"text":" ","start":7,"stop":7},{"type":188,"text":"addition","start":8,"stop":15},{"type":119,"text":"\n    ","start":16,"stop":20},{"type":41,"text":"implicit","start":21,"stop":28},{"type":119,"text":" ","start":29,"stop":29},{"type":42,"text":"none","start":30,"stop":33},{"type":119,"text":"\n\n    ","start":34,"stop":39},{"type":168,"text":"integer","start":40,"stop":46},{"type":119,"text":" ","start":47,"stop":47},{"type":30,"text":"::","start":48,"stop":49},{"type":119,"text":" ","start":50,"stop":50},{"type":188,"text":"a","start":51,"stop":51},{"type":122,"text":",","start":52,"stop":52},{"type":119,"text":" ","start":53,"stop":53},{"type":188,"text":"b","start":54,"stop":54},{"type":122,"text":",","start":55,"stop":55},{"type":119,"text":" ","start":56,"stop":56},{"type":55,"text":"result","start":57,"stop":62},{"type":119,"text":"\n\n    ","start":63,"stop":68},{"type":188,"text":"a","start":69,"stop":69},{"type":119,"text":" ","start":70,"stop":70},{"type":130,"text":"\u003d","start":71,"stop":71},{"type":119,"text":" ","start":72,"stop":72},{"type":186,"text":"1","start":73,"stop":73},{"type":119,"text":"\n    ","start":74,"stop":78},{"type":188,"text":"b","start":79,"stop":79},{"type":119,"text":" ","start":80,"stop":80},{"type":130,"text":"\u003d","start":81,"stop":81},{"type":119,"text":" ","start":82,"stop":82},{"type":186,"text":"3","start":83,"stop":83},{"type":119,"text":"\n\n    ","start":84,"stop":89},{"type":55,"text":"result","start":90,"stop":95},{"type":119,"text":" ","start":96,"stop":96},{"type":130,"text":"\u003d","start":97,"stop":97},{"type":119,"text":" ","start":98,"stop":98},{"type":188,"text":"a","start":99,"stop":99},{"type":119,"text":" ","start":100,"stop":100},{"type":132,"text":"+","start":101,"stop":101},{"type":119,"text":" ","start":102,"stop":102},{"type":188,"text":"b","start":103,"stop":103},{"type":119,"text":"\n\n    ","start":104,"stop":109},{"type":72,"text":"write","start":110,"stop":114},{"type":123,"text":"(","start":115,"stop":115},{"type":192,"text":"*","start":116,"stop":116},{"type":122,"text":",","start":117,"stop":117},{"type":192,"text":"*","start":118,"stop":118},{"type":128,"text":")","start":119,"stop":119},{"type":119,"text":" ","start":120,"stop":120},{"type":177,"text":"\"The sum of\"","start":121,"stop":132},{"type":122,"text":",","start":133,"stop":133},{"type":119,"text":" ","start":134,"stop":134},{"type":188,"text":"a","start":135,"stop":135},{"type":122,"text":",","start":136,"stop":136},{"type":119,"text":" ","start":137,"stop":137},{"type":177,"text":"\"and\"","start":138,"stop":142},{"type":122,"text":",","start":143,"stop":143},{"type":119,"text":" ","start":144,"stop":144},{"type":188,"text":"b","start":145,"stop":145},{"type":122,"text":",","start":146,"stop":146},{"type":119,"text":" ","start":147,"stop":147},{"type":177,"text":"\"is\"","start":148,"stop":151},{"type":122,"text":",","start":152,"stop":152},{"type":119,"text":" ","start":153,"stop":153},{"type":55,"text":"result","start":154,"stop":159},{"type":119,"text":"\n\n","start":160,"stop":161},{"type":12,"text":"end","start":162,"stop":164},{"type":119,"text":" ","start":165,"stop":165},{"type":5,"text":"program","start":166,"stop":172},{"type":119,"text":" ","start":173,"stop":173},{"type":188,"text":"addition","start":174,"stop":181},{"type":119,"text":"\n","start":182,"stop":182},{"type":-1,"text":"\u003cEOF\u003e","start":183,"stop":182}]}
+
+  Token Count: 73
+  Start line number: 1
+  End line number: 14
+
+  Antlr4 Parse Tree String: 
+    (program (executableProgram (programUnit (mainProgram (programStmt program addition) mainRange)) (programUnit (mainProgram (mainRange implicit none))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange integer ::))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange a ,))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange b , result))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange a =))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange 1))) (programUnit (mainProgram (mainRange b =))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange 3 result =))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange a +))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange b))) (programUnit (mainProgram (mainRange write ( * , * ) "The sum of" ,))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange a , "and" ,))) (programUnit (mainProgram mainRange)) (programUnit (mainProgram (mainRange b , "is" , result))) (programUnit (mainProgram (mainRange (endProgramStmt end program addition))))) <EOF>)

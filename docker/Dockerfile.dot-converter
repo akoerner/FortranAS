@@ -1,0 +1,10 @@
+FROM python:3.12.0b4-slim-bullseye
+
+RUN apt-get update && apt-get install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev graphviz-dev graphviz
+RUN python3 -m pip install networkx pygraphviz pyvis
+
+COPY FortranAS/src/dot-converter.py /usr/local/bin
+
+WORKDIR /tmp/src
+cmd python3 /usr/local/bin/dot-converter.py
+

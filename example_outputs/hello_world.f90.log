@@ -1,0 +1,722 @@
+Fortran source file: /tmp/src/hello_world.f90
+ USING: Lexer: AbstractFortran90Lexer
+ USING: Parser: Fortran90Parser
+  Token start number: 0
+  Token end number: 17
+  Tokens:
+    Token: program Type: 5
+    Token:   Type: 119
+    Token: hello Type: 188
+    Token: \n   Type: 119
+    Token: print Type: 74
+    Token:   Type: 119
+    Token: * Type: 192
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: 'Hello, World!' Type: 177
+    Token: \n Type: 119
+    Token: end Type: 12
+    Token:   Type: 119
+    Token: program Type: 5
+    Token:   Type: 119
+    Token: hello Type: 188
+    Token: \n Type: 119
+    Token: <EOF> Type: -1
+
+  Parse tree JSON string:
+    {
+  "name": "ProgramContext",
+  "text": "programhelloprint*,'Hello, World!'endprogramhello<EOF>",
+  "children": [
+    {
+      "name": "ExecutableProgramContext",
+      "text": "programhelloprint*,'Hello, World!'endprogramhello",
+      "children": [
+        {
+          "name": "ProgramUnitContext",
+          "text": "programhelloprint*,'Hello, World!'endprogramhello",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "programhelloprint*,'Hello, World!'endprogramhello",
+              "children": [
+                {
+                  "name": "ProgramStmtContext",
+                  "text": "programhello",
+                  "children": [
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "program",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "hello",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "MainRangeContext",
+                  "text": "print*,'Hello, World!'endprogramhello",
+                  "children": [
+                    {
+                      "name": "BodyContext",
+                      "text": "print*,'Hello, World!'",
+                      "children": [
+                        {
+                          "name": "BodyConstructContext",
+                          "text": "print*,'Hello, World!'",
+                          "children": [
+                            {
+                              "name": "ExecutableConstructContext",
+                              "text": "print*,'Hello, World!'",
+                              "children": [
+                                {
+                                  "name": "ActionStmtContext",
+                                  "text": "print*,'Hello, World!'",
+                                  "children": [
+                                    {
+                                      "name": "PrintStmtContext",
+                                      "text": "print*,'Hello, World!'",
+                                      "children": [
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": "print",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "FormatIdentifierContext",
+                                          "text": "*",
+                                          "children": [
+                                            {
+                                              "name": "TerminalNodeImpl",
+                                              "text": "*",
+                                              "children": [
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": ",",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "OutputItemListContext",
+                                          "text": "'Hello, World!'",
+                                          "children": [
+                                            {
+                                              "name": "ExpressionContext",
+                                              "text": "'Hello, World!'",
+                                              "children": [
+                                                {
+                                                  "name": "Level5ExprContext",
+                                                  "text": "'Hello, World!'",
+                                                  "children": [
+                                                    {
+                                                      "name": "EquivOperandContext",
+                                                      "text": "'Hello, World!'",
+                                                      "children": [
+                                                        {
+                                                          "name": "OrOperandContext",
+                                                          "text": "'Hello, World!'",
+                                                          "children": [
+                                                            {
+                                                              "name": "AndOperandContext",
+                                                              "text": "'Hello, World!'",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Level4ExprContext",
+                                                                  "text": "'Hello, World!'",
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "Level3ExprContext",
+                                                                      "text": "'Hello, World!'",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Level2ExprContext",
+                                                                          "text": "'Hello, World!'",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "AddOperandContext",
+                                                                              "text": "'Hello, World!'",
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "'Hello, World!'",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "'Hello, World!'",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "'Hello, World!'",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "TerminalNodeImpl",
+                                                                                              "text": "'Hello, World!'",
+                                                                                              "children": [
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "EndProgramStmtContext",
+                      "text": "endprogramhello",
+                      "children": [
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "end",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "program",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "hello",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TerminalNodeImpl",
+      "text": "<EOF>",
+      "children": [
+      ]
+    }
+  ]
+}
+
+  Abstract syntax tree JSON string:
+    {
+  "name": "ProgramContext",
+  "text": "programhelloprint*,'Hello, World!'endprogramhello<EOF>",
+  "children": [
+    {
+      "name": "ExecutableProgramContext",
+      "text": "programhelloprint*,'Hello, World!'endprogramhello",
+      "children": [
+        {
+          "name": "ProgramUnitContext",
+          "text": "programhelloprint*,'Hello, World!'endprogramhello",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "programhelloprint*,'Hello, World!'endprogramhello",
+              "children": [
+                {
+                  "name": "ProgramStmtContext",
+                  "text": "programhello",
+                  "children": [
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "program",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "hello",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "MainRangeContext",
+                  "text": "print*,'Hello, World!'endprogramhello",
+                  "children": [
+                    {
+                      "name": "BodyContext",
+                      "text": "print*,'Hello, World!'",
+                      "children": [
+                        {
+                          "name": "BodyConstructContext",
+                          "text": "print*,'Hello, World!'",
+                          "children": [
+                            {
+                              "name": "ExecutableConstructContext",
+                              "text": "print*,'Hello, World!'",
+                              "children": [
+                                {
+                                  "name": "ActionStmtContext",
+                                  "text": "print*,'Hello, World!'",
+                                  "children": [
+                                    {
+                                      "name": "PrintStmtContext",
+                                      "text": "print*,'Hello, World!'",
+                                      "children": [
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": "print",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "FormatIdentifierContext",
+                                          "text": "*",
+                                          "children": [
+                                            {
+                                              "name": "TerminalNodeImpl",
+                                              "text": "*",
+                                              "children": [
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": ",",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "OutputItemListContext",
+                                          "text": "'Hello, World!'",
+                                          "children": [
+                                            {
+                                              "name": "ExpressionContext",
+                                              "text": "'Hello, World!'",
+                                              "children": [
+                                                {
+                                                  "name": "Level5ExprContext",
+                                                  "text": "'Hello, World!'",
+                                                  "children": [
+                                                    {
+                                                      "name": "EquivOperandContext",
+                                                      "text": "'Hello, World!'",
+                                                      "children": [
+                                                        {
+                                                          "name": "OrOperandContext",
+                                                          "text": "'Hello, World!'",
+                                                          "children": [
+                                                            {
+                                                              "name": "AndOperandContext",
+                                                              "text": "'Hello, World!'",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Level4ExprContext",
+                                                                  "text": "'Hello, World!'",
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "Level3ExprContext",
+                                                                      "text": "'Hello, World!'",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Level2ExprContext",
+                                                                          "text": "'Hello, World!'",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "AddOperandContext",
+                                                                              "text": "'Hello, World!'",
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "'Hello, World!'",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "'Hello, World!'",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "'Hello, World!'",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "TerminalNodeImpl",
+                                                                                              "text": "'Hello, World!'",
+                                                                                              "children": [
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "EndProgramStmtContext",
+                      "text": "endprogramhello",
+                      "children": [
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "end",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "program",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "hello",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TerminalNodeImpl",
+      "text": "<EOF>",
+      "children": [
+      ]
+    }
+  ]
+}
+
+  Parse tree DOT string:
+    strict digraph ParseTree {
+  node [shape=box];
+"0" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello<EOF> \n\lToken Count:: \n17 \n\lToken Range:: \n0 - 17 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"0" -> "1" 
+"1" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n15 \n\lToken Range:: \n0 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"1" -> "2" 
+"2" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n15 \n\lToken Range:: \n0 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"2" -> "3" 
+"3" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n15 \n\lToken Range:: \n0 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"3" -> "4" 
+"4" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramhello \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram hello
+ \n"] 
+"4" -> "5" 
+"5" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram hello
+ \n"] 
+"4" -> "6" 
+"6" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nhello \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram hello
+ \n"] 
+"3" -> "7" 
+"7" [label="\lRule:: \nMainRangeContext \n\lValue:: \nprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n11 \n\lToken Range:: \n4 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"7" -> "8" 
+"8" [label="\lRule:: \nBodyContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"8" -> "9" 
+"9" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"9" -> "10" 
+"10" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"10" -> "11" 
+"11" [label="\lRule:: \nActionStmtContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"11" -> "12" 
+"12" [label="\lRule:: \nPrintStmtContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"12" -> "13" 
+"13" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprint \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"12" -> "14" 
+"14" [label="\lRule:: \nFormatIdentifierContext \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n6 - 6 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"14" -> "15" 
+"15" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n6 - 6 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"12" -> "16" 
+"16" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n, \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"12" -> "17" 
+"17" [label="\lRule:: \nOutputItemListContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"17" -> "18" 
+"18" [label="\lRule:: \nExpressionContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"18" -> "19" 
+"19" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"19" -> "20" 
+"20" [label="\lRule:: \nEquivOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"20" -> "21" 
+"21" [label="\lRule:: \nOrOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"21" -> "22" 
+"22" [label="\lRule:: \nAndOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"22" -> "23" 
+"23" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"23" -> "24" 
+"24" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"24" -> "25" 
+"25" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"25" -> "26" 
+"26" [label="\lRule:: \nAddOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"26" -> "27" 
+"27" [label="\lRule:: \nMultOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"27" -> "28" 
+"28" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"28" -> "29" 
+"29" [label="\lRule:: \nPrimaryContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"29" -> "30" 
+"30" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"7" -> "31" 
+"31" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramhello \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"31" -> "32" 
+"32" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"31" -> "33" 
+"33" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"31" -> "34" 
+"34" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nhello \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"0" -> "35" 
+"35" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n17 \n\lToken Range:: \n0 - 17 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+}
+
+
+  Abstract syntax tree DOT string:
+    strict digraph ParseTree {
+  node [shape=box];
+"programhelloprint*,'Hello, World!'endprogramhello<EOF>017" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello<EOF> \n\lToken Count:: \n17 \n\lToken Range:: \n0 - 17 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"programhelloprint*,'Hello, World!'endprogramhello<EOF>017" -> "programhelloprint*,'Hello, World!'endprogramhello015" 
+"programhelloprint*,'Hello, World!'endprogramhello015" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n15 \n\lToken Range:: \n0 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"programhelloprint*,'Hello, World!'endprogramhello015" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n15 \n\lToken Range:: \n0 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"programhelloprint*,'Hello, World!'endprogramhello015" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramhelloprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n15 \n\lToken Range:: \n0 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"programhelloprint*,'Hello, World!'endprogramhello015" -> "programhello02" 
+"programhello02" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramhello \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram hello
+ \n"] 
+"programhello02" -> "program02" 
+"program02" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram hello
+ \n"] 
+"programhello02" -> "hello02" 
+"hello02" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nhello \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram hello
+ \n"] 
+"programhelloprint*,'Hello, World!'endprogramhello015" -> "print*,'Hello, World!'endprogramhello415" 
+"print*,'Hello, World!'endprogramhello415" [label="\lRule:: \nMainRangeContext \n\lValue:: \nprint*,'Hello, World!'endprogramhello \n\lToken Count:: \n11 \n\lToken Range:: \n4 - 15 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"print*,'Hello, World!'endprogramhello415" -> "print*,'Hello, World!'49" 
+"print*,'Hello, World!'49" [label="\lRule:: \nBodyContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" [label="\lRule:: \nActionStmtContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" [label="\lRule:: \nPrintStmtContext \n\lValue:: \nprint*,'Hello, World!' \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" -> "print49" 
+"print49" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprint \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" -> "*66" 
+"*66" [label="\lRule:: \nFormatIdentifierContext \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n6 - 6 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"*66" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n6 - 6 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" -> ",49" 
+",49" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n, \n\lToken Count:: \n5 \n\lToken Range:: \n4 - 9 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'49" -> "'Hello, World!'99" 
+"'Hello, World!'99" [label="\lRule:: \nOutputItemListContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nExpressionContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nEquivOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nOrOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nAndOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nAddOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nMultOperandContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nPrimaryContext \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"'Hello, World!'99" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n'Hello, World!' \n\lToken Count:: \n0 \n\lToken Range:: \n9 - 9 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n  print *, 'Hello, World!'
+ \n"] 
+"print*,'Hello, World!'endprogramhello415" -> "endprogramhello1115" 
+"endprogramhello1115" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramhello \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"endprogramhello1115" -> "end1115" 
+"end1115" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"endprogramhello1115" -> "program1115" 
+"program1115" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"endprogramhello1115" -> "hello1115" 
+"hello1115" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nhello \n\lToken Count:: \n4 \n\lToken Range:: \n11 - 15 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  print *, 'Hello, World!'
+end program hello
+ \n"] 
+"programhelloprint*,'Hello, World!'endprogramhello<EOF>017" -> "<EOF>017" 
+"<EOF>017" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n17 \n\lToken Range:: \n0 - 17 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram hello
+  print *, 'Hello, World!'
+end program hello
+ \n"] 
+}
+
+
+  Tokens JSON:
+    {"tokens":[{"type":5,"text":"program","start":0,"stop":6},{"type":119,"text":" ","start":7,"stop":7},{"type":188,"text":"hello","start":8,"stop":12},{"type":119,"text":"\n  ","start":13,"stop":15},{"type":74,"text":"print","start":16,"stop":20},{"type":119,"text":" ","start":21,"stop":21},{"type":192,"text":"*","start":22,"stop":22},{"type":122,"text":",","start":23,"stop":23},{"type":119,"text":" ","start":24,"stop":24},{"type":177,"text":"\u0027Hello, World!\u0027","start":25,"stop":39},{"type":119,"text":"\n","start":40,"stop":40},{"type":12,"text":"end","start":41,"stop":43},{"type":119,"text":" ","start":44,"stop":44},{"type":5,"text":"program","start":45,"stop":51},{"type":119,"text":" ","start":52,"stop":52},{"type":188,"text":"hello","start":53,"stop":57},{"type":119,"text":"\n","start":58,"stop":58},{"type":-1,"text":"\u003cEOF\u003e","start":59,"stop":58}]}
+
+  Token Count: 18
+  Start line number: 1
+  End line number: 4
+
+  Antlr4 Parse Tree String: 
+    (program (executableProgram (programUnit (mainProgram (programStmt program hello) (mainRange (body (bodyConstruct (executableConstruct (actionStmt (printStmt print (formatIdentifier *) , (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary 'Hello, World!')))))))))))))))))) (endProgramStmt end program hello))))) <EOF>)

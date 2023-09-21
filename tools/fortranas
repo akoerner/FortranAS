@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echoerr (){ printf "%s" "$@" >&2;}
+exiterr (){ printf "%s\n" "$@" >&2; exit 1;}
+
+SCRIPT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+jar_file=$(find "$(pwd)" -type f -name 'FortranAS*.jar' -print -quit)
+RAM_G=8
+
+
+if ! [[ -x "$(command -v java)" ]]; then
+    exiterr "ERROR: Java is not installed. Please install Java and try again."
+fi
+
+java -Xmx"${RAM_G}"g -jar "${jar_file}" "$@"

@@ -1,0 +1,421 @@
+strict digraph ParseTree {
+  node [shape=box];
+"0" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramloopimplicitnoneinteger::idoi=0,9write(*,*)ienddostopendprogramloop<EOF> \n\lToken Count:: \n47 \n\lToken Range:: \n0 - 47 \n\lLine Count:: \n10 \n\lLine Range:: \n1 - 11 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+
+    stop
+end program loop
+ \n"] 
+"0" -> "1" 
+"1" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramloopimplicitnoneinteger::idoi=0,9write(*,*)ienddostopendprogramloop \n\lToken Count:: \n45 \n\lToken Range:: \n0 - 45 \n\lLine Count:: \n9 \n\lLine Range:: \n1 - 10 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+
+    stop
+end program loop
+ \n"] 
+"1" -> "2" 
+"2" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramloopimplicitnoneinteger::idoi=0,9write(*,*)ienddostopendprogramloop \n\lToken Count:: \n45 \n\lToken Range:: \n0 - 45 \n\lLine Count:: \n9 \n\lLine Range:: \n1 - 10 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+
+    stop
+end program loop
+ \n"] 
+"2" -> "3" 
+"3" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramloopimplicitnoneinteger::idoi=0,9write(*,*)ienddostopendprogramloop \n\lToken Count:: \n45 \n\lToken Range:: \n0 - 45 \n\lLine Count:: \n9 \n\lLine Range:: \n1 - 10 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+
+    stop
+end program loop
+ \n"] 
+"3" -> "4" 
+"4" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramloop \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram loop
+ \n"] 
+"4" -> "5" 
+"5" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram loop
+ \n"] 
+"4" -> "6" 
+"6" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nloop \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram loop
+ \n"] 
+"3" -> "7" 
+"7" [label="\lRule:: \nMainRangeContext \n\lValue:: \nimplicitnoneinteger::idoi=0,9write(*,*)ienddostopendprogramloop \n\lToken Count:: \n41 \n\lToken Range:: \n4 - 45 \n\lLine Count:: \n9 \n\lLine Range:: \n1 - 10 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+
+    stop
+end program loop
+ \n"] 
+"7" -> "8" 
+"8" [label="\lRule:: \nBodyContext \n\lValue:: \nimplicitnoneinteger::idoi=0,9write(*,*)ienddostop \n\lToken Count:: \n35 \n\lToken Range:: \n4 - 39 \n\lLine Count:: \n6 \n\lLine Range:: \n1 - 7 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+ \n"] 
+"8" -> "9" 
+"9" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram loop
+    implicit none
+ \n"] 
+"9" -> "10" 
+"10" [label="\lRule:: \nSpecificationPartConstructContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram loop
+    implicit none
+ \n"] 
+"10" -> "11" 
+"11" [label="\lRule:: \nImplicitStmtContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram loop
+    implicit none
+ \n"] 
+"11" -> "12" 
+"12" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nimplicit \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram loop
+    implicit none
+ \n"] 
+"11" -> "13" 
+"13" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram loop
+    implicit none
+ \n"] 
+"8" -> "14" 
+"14" [label="\lRule:: \nBodyConstructContext \n\lValue:: \ninteger::i \n\lToken Count:: \n4 \n\lToken Range:: \n8 - 12 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n    implicit none
+    integer :: i
+ \n"] 
+"14" -> "15" 
+"15" [label="\lRule:: \nSpecificationPartConstructContext \n\lValue:: \ninteger::i \n\lToken Count:: \n4 \n\lToken Range:: \n8 - 12 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n    implicit none
+    integer :: i
+ \n"] 
+"15" -> "16" 
+"16" [label="\lRule:: \nDeclarationConstructContext \n\lValue:: \ninteger::i \n\lToken Count:: \n4 \n\lToken Range:: \n8 - 12 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n    implicit none
+    integer :: i
+ \n"] 
+"16" -> "17" 
+"17" [label="\lRule:: \nTypeDeclarationStmtContext \n\lValue:: \ninteger::i \n\lToken Count:: \n4 \n\lToken Range:: \n8 - 12 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n    implicit none
+    integer :: i
+ \n"] 
+"17" -> "18" 
+"18" [label="\lRule:: \nTypeSpecContext \n\lValue:: \ninteger \n\lToken Count:: \n0 \n\lToken Range:: \n8 - 8 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"18" -> "19" 
+"19" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \ninteger \n\lToken Count:: \n0 \n\lToken Range:: \n8 - 8 \n\lLine Count:: \n0 \n\lLine Range:: \n2 - 2 \n\lSource Code:: \n    implicit none
+ \n"] 
+"17" -> "20" 
+"20" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n:: \n\lToken Count:: \n4 \n\lToken Range:: \n8 - 12 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n    implicit none
+    integer :: i
+ \n"] 
+"17" -> "21" 
+"21" [label="\lRule:: \nEntityDeclListContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n12 - 12 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n    integer :: i
+ \n"] 
+"21" -> "22" 
+"22" [label="\lRule:: \nEntityDeclContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n12 - 12 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n    integer :: i
+ \n"] 
+"22" -> "23" 
+"23" [label="\lRule:: \nObjectNameContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n12 - 12 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n    integer :: i
+ \n"] 
+"23" -> "24" 
+"24" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n12 - 12 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n    integer :: i
+ \n"] 
+"8" -> "25" 
+"25" [label="\lRule:: \nBodyConstructContext \n\lValue:: \ndoi=0,9write(*,*)ienddo \n\lToken Count:: \n23 \n\lToken Range:: \n14 - 37 \n\lLine Count:: \n4 \n\lLine Range:: \n3 - 7 \n\lSource Code:: \n    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+ \n"] 
+"25" -> "26" 
+"26" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \ndoi=0,9write(*,*)ienddo \n\lToken Count:: \n23 \n\lToken Range:: \n14 - 37 \n\lLine Count:: \n4 \n\lLine Range:: \n3 - 7 \n\lSource Code:: \n    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+ \n"] 
+"26" -> "27" 
+"27" [label="\lRule:: \nDoConstructContext \n\lValue:: \ndoi=0,9write(*,*)ienddo \n\lToken Count:: \n23 \n\lToken Range:: \n14 - 37 \n\lLine Count:: \n4 \n\lLine Range:: \n3 - 7 \n\lSource Code:: \n    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+ \n"] 
+"27" -> "28" 
+"28" [label="\lRule:: \nBlockDoConstructContext \n\lValue:: \ndoi=0,9write(*,*)ienddo \n\lToken Count:: \n23 \n\lToken Range:: \n14 - 37 \n\lLine Count:: \n4 \n\lLine Range:: \n3 - 7 \n\lSource Code:: \n    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+ \n"] 
+"28" -> "29" 
+"29" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \ndo \n\lToken Count:: \n23 \n\lToken Range:: \n14 - 37 \n\lLine Count:: \n4 \n\lLine Range:: \n3 - 7 \n\lSource Code:: \n    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+ \n"] 
+"28" -> "30" 
+"30" [label="\lRule:: \nCommaLoopControlContext \n\lValue:: \ni=0,9 \n\lToken Count:: \n7 \n\lToken Range:: \n16 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"30" -> "31" 
+"31" [label="\lRule:: \nLoopControlContext \n\lValue:: \ni=0,9 \n\lToken Count:: \n7 \n\lToken Range:: \n16 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"31" -> "32" 
+"32" [label="\lRule:: \nVariableNameContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n16 - 16 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"32" -> "33" 
+"33" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n16 - 16 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"31" -> "34" 
+"34" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n= \n\lToken Count:: \n7 \n\lToken Range:: \n16 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"31" -> "35" 
+"35" [label="\lRule:: \nExpressionContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"35" -> "36" 
+"36" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"36" -> "37" 
+"37" [label="\lRule:: \nEquivOperandContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"37" -> "38" 
+"38" [label="\lRule:: \nOrOperandContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"38" -> "39" 
+"39" [label="\lRule:: \nAndOperandContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"39" -> "40" 
+"40" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"40" -> "41" 
+"41" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"41" -> "42" 
+"42" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"42" -> "43" 
+"43" [label="\lRule:: \nAddOperandContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"43" -> "44" 
+"44" [label="\lRule:: \nMultOperandContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"44" -> "45" 
+"45" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"45" -> "46" 
+"46" [label="\lRule:: \nPrimaryContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"46" -> "47" 
+"47" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"47" -> "48" 
+"48" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n0 \n\lToken Count:: \n0 \n\lToken Range:: \n20 - 20 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"31" -> "49" 
+"49" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n, \n\lToken Count:: \n7 \n\lToken Range:: \n16 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"31" -> "50" 
+"50" [label="\lRule:: \nExpressionContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"50" -> "51" 
+"51" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"51" -> "52" 
+"52" [label="\lRule:: \nEquivOperandContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"52" -> "53" 
+"53" [label="\lRule:: \nOrOperandContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"53" -> "54" 
+"54" [label="\lRule:: \nAndOperandContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"54" -> "55" 
+"55" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"55" -> "56" 
+"56" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"56" -> "57" 
+"57" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"57" -> "58" 
+"58" [label="\lRule:: \nAddOperandContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"58" -> "59" 
+"59" [label="\lRule:: \nMultOperandContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"59" -> "60" 
+"60" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"60" -> "61" 
+"61" [label="\lRule:: \nPrimaryContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"61" -> "62" 
+"62" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"62" -> "63" 
+"63" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n9 \n\lToken Count:: \n0 \n\lToken Range:: \n23 - 23 \n\lLine Count:: \n0 \n\lLine Range:: \n5 - 5 \n\lSource Code:: \n    do i = 0, 9
+ \n"] 
+"28" -> "64" 
+"64" [label="\lRule:: \nExecutionPartConstructContext \n\lValue:: \nwrite(*,*)i \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"64" -> "65" 
+"65" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \nwrite(*,*)i \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"65" -> "66" 
+"66" [label="\lRule:: \nActionStmtContext \n\lValue:: \nwrite(*,*)i \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"66" -> "67" 
+"67" [label="\lRule:: \nWriteStmtContext \n\lValue:: \nwrite(*,*)i \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"67" -> "68" 
+"68" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nwrite \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"67" -> "69" 
+"69" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n( \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"67" -> "70" 
+"70" [label="\lRule:: \nIoControlSpecListContext \n\lValue:: \n*,* \n\lToken Count:: \n3 \n\lToken Range:: \n27 - 30 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"70" -> "71" 
+"71" [label="\lRule:: \nUnitIdentifierContext \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n27 - 27 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"71" -> "72" 
+"72" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n27 - 27 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"70" -> "73" 
+"73" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n, \n\lToken Count:: \n3 \n\lToken Range:: \n27 - 30 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"70" -> "74" 
+"74" [label="\lRule:: \nFormatIdentifierContext \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n30 - 30 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"74" -> "75" 
+"75" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n30 - 30 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"67" -> "76" 
+"76" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n) \n\lToken Count:: \n8 \n\lToken Range:: \n25 - 33 \n\lLine Count:: \n1 \n\lLine Range:: \n5 - 6 \n\lSource Code:: \n    do i = 0, 9
+        write(*, *) i
+ \n"] 
+"67" -> "77" 
+"77" [label="\lRule:: \nOutputItemListContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"77" -> "78" 
+"78" [label="\lRule:: \nExpressionContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"78" -> "79" 
+"79" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"79" -> "80" 
+"80" [label="\lRule:: \nEquivOperandContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"80" -> "81" 
+"81" [label="\lRule:: \nOrOperandContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"81" -> "82" 
+"82" [label="\lRule:: \nAndOperandContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"82" -> "83" 
+"83" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"83" -> "84" 
+"84" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"84" -> "85" 
+"85" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"85" -> "86" 
+"86" [label="\lRule:: \nAddOperandContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"86" -> "87" 
+"87" [label="\lRule:: \nMultOperandContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"87" -> "88" 
+"88" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"88" -> "89" 
+"89" [label="\lRule:: \nPrimaryContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"89" -> "90" 
+"90" [label="\lRule:: \nNameDataRefContext \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"90" -> "91" 
+"91" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \ni \n\lToken Count:: \n0 \n\lToken Range:: \n33 - 33 \n\lLine Count:: \n0 \n\lLine Range:: \n6 - 6 \n\lSource Code:: \n        write(*, *) i
+ \n"] 
+"28" -> "92" 
+"92" [label="\lRule:: \nEndDoStmtContext \n\lValue:: \nenddo \n\lToken Count:: \n2 \n\lToken Range:: \n35 - 37 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n        write(*, *) i
+    end do
+ \n"] 
+"92" -> "93" 
+"93" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n2 \n\lToken Range:: \n35 - 37 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n        write(*, *) i
+    end do
+ \n"] 
+"92" -> "94" 
+"94" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \ndo \n\lToken Count:: \n2 \n\lToken Range:: \n35 - 37 \n\lLine Count:: \n1 \n\lLine Range:: \n6 - 7 \n\lSource Code:: \n        write(*, *) i
+    end do
+ \n"] 
+"8" -> "95" 
+"95" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nstop \n\lToken Count:: \n0 \n\lToken Range:: \n39 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    end do
+ \n"] 
+"95" -> "96" 
+"96" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \nstop \n\lToken Count:: \n0 \n\lToken Range:: \n39 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    end do
+ \n"] 
+"96" -> "97" 
+"97" [label="\lRule:: \nActionStmtContext \n\lValue:: \nstop \n\lToken Count:: \n0 \n\lToken Range:: \n39 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    end do
+ \n"] 
+"97" -> "98" 
+"98" [label="\lRule:: \nStopStmtContext \n\lValue:: \nstop \n\lToken Count:: \n0 \n\lToken Range:: \n39 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    end do
+ \n"] 
+"98" -> "99" 
+"99" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nstop \n\lToken Count:: \n0 \n\lToken Range:: \n39 - 39 \n\lLine Count:: \n0 \n\lLine Range:: \n7 - 7 \n\lSource Code:: \n    end do
+ \n"] 
+"7" -> "100" 
+"100" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramloop \n\lToken Count:: \n4 \n\lToken Range:: \n41 - 45 \n\lLine Count:: \n1 \n\lLine Range:: \n9 - 10 \n\lSource Code:: \n    stop
+end program loop
+ \n"] 
+"100" -> "101" 
+"101" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n41 - 45 \n\lLine Count:: \n1 \n\lLine Range:: \n9 - 10 \n\lSource Code:: \n    stop
+end program loop
+ \n"] 
+"100" -> "102" 
+"102" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n41 - 45 \n\lLine Count:: \n1 \n\lLine Range:: \n9 - 10 \n\lSource Code:: \n    stop
+end program loop
+ \n"] 
+"100" -> "103" 
+"103" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nloop \n\lToken Count:: \n4 \n\lToken Range:: \n41 - 45 \n\lLine Count:: \n1 \n\lLine Range:: \n9 - 10 \n\lSource Code:: \n    stop
+end program loop
+ \n"] 
+"0" -> "104" 
+"104" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n47 \n\lToken Range:: \n0 - 47 \n\lLine Count:: \n10 \n\lLine Range:: \n1 - 11 \n\lSource Code:: \nprogram loop
+    implicit none
+    integer :: i
+
+    do i = 0, 9
+        write(*, *) i
+    end do
+
+    stop
+end program loop
+ \n"] 
+}

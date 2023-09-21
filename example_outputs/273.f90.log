@@ -1,0 +1,1091 @@
+Fortran source file: /tmp/src/273.f90
+ USING: Lexer: AbstractFortran90Lexer
+ USING: Parser: Fortran90Parser
+  Token start number: 0
+  Token end number: 29
+  Tokens:
+    Token: program Type: 5
+    Token:   Type: 119
+    Token: Calculator Type: 188
+    Token: \n   Type: 119
+    Token: implicit Type: 41
+    Token:   Type: 119
+    Token: none Type: 42
+    Token: \n   Type: 119
+    Token: print Type: 74
+    Token:   Type: 119
+    Token: * Type: 192
+    Token: , Type: 122
+    Token:   Type: 119
+    Token: 2 Type: 186
+    Token:   Type: 119
+    Token: * Type: 192
+    Token:   Type: 119
+    Token: 7 Type: 186
+    Token:   Type: 119
+    Token: + Type: 132
+    Token:   Type: 119
+    Token: 3 Type: 186
+    Token:   \n Type: 119
+    Token: end Type: 12
+    Token:   Type: 119
+    Token: program Type: 5
+    Token:   Type: 119
+    Token: Calculator Type: 188
+    Token: \n Type: 119
+    Token: <EOF> Type: -1
+
+  Parse tree JSON string:
+    {
+  "name": "ProgramContext",
+  "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF>",
+  "children": [
+    {
+      "name": "ExecutableProgramContext",
+      "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator",
+      "children": [
+        {
+          "name": "ProgramUnitContext",
+          "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator",
+              "children": [
+                {
+                  "name": "ProgramStmtContext",
+                  "text": "programCalculator",
+                  "children": [
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "program",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "Calculator",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "MainRangeContext",
+                  "text": "implicitnoneprint*,2*7+3endprogramCalculator",
+                  "children": [
+                    {
+                      "name": "BodyContext",
+                      "text": "implicitnoneprint*,2*7+3",
+                      "children": [
+                        {
+                          "name": "BodyConstructContext",
+                          "text": "implicitnone",
+                          "children": [
+                            {
+                              "name": "SpecificationPartConstructContext",
+                              "text": "implicitnone",
+                              "children": [
+                                {
+                                  "name": "ImplicitStmtContext",
+                                  "text": "implicitnone",
+                                  "children": [
+                                    {
+                                      "name": "TerminalNodeImpl",
+                                      "text": "implicit",
+                                      "children": [
+                                      ]
+                                    },
+                                    {
+                                      "name": "TerminalNodeImpl",
+                                      "text": "none",
+                                      "children": [
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "BodyConstructContext",
+                          "text": "print*,2*7+3",
+                          "children": [
+                            {
+                              "name": "ExecutableConstructContext",
+                              "text": "print*,2*7+3",
+                              "children": [
+                                {
+                                  "name": "ActionStmtContext",
+                                  "text": "print*,2*7+3",
+                                  "children": [
+                                    {
+                                      "name": "PrintStmtContext",
+                                      "text": "print*,2*7+3",
+                                      "children": [
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": "print",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "FormatIdentifierContext",
+                                          "text": "*",
+                                          "children": [
+                                            {
+                                              "name": "TerminalNodeImpl",
+                                              "text": "*",
+                                              "children": [
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": ",",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "OutputItemListContext",
+                                          "text": "2*7+3",
+                                          "children": [
+                                            {
+                                              "name": "ExpressionContext",
+                                              "text": "2*7+3",
+                                              "children": [
+                                                {
+                                                  "name": "Level5ExprContext",
+                                                  "text": "2*7+3",
+                                                  "children": [
+                                                    {
+                                                      "name": "EquivOperandContext",
+                                                      "text": "2*7+3",
+                                                      "children": [
+                                                        {
+                                                          "name": "OrOperandContext",
+                                                          "text": "2*7+3",
+                                                          "children": [
+                                                            {
+                                                              "name": "AndOperandContext",
+                                                              "text": "2*7+3",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Level4ExprContext",
+                                                                  "text": "2*7+3",
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "Level3ExprContext",
+                                                                      "text": "2*7+3",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Level2ExprContext",
+                                                                          "text": "2*7+3",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "AddOperandContext",
+                                                                              "text": "2*7",
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "2",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "2",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "2",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "UnsignedArithmeticConstantContext",
+                                                                                              "text": "2",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "TerminalNodeImpl",
+                                                                                                  "text": "2",
+                                                                                                  "children": [
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "name": "TerminalNodeImpl",
+                                                                                  "text": "*",
+                                                                                  "children": [
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "7",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "7",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "7",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "UnsignedArithmeticConstantContext",
+                                                                                              "text": "7",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "TerminalNodeImpl",
+                                                                                                  "text": "7",
+                                                                                                  "children": [
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "name": "TerminalNodeImpl",
+                                                                              "text": "+",
+                                                                              "children": [
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "name": "AddOperandContext",
+                                                                              "text": "3",
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "3",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "3",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "3",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "UnsignedArithmeticConstantContext",
+                                                                                              "text": "3",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "TerminalNodeImpl",
+                                                                                                  "text": "3",
+                                                                                                  "children": [
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "EndProgramStmtContext",
+                      "text": "endprogramCalculator",
+                      "children": [
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "end",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "program",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "Calculator",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TerminalNodeImpl",
+      "text": "<EOF>",
+      "children": [
+      ]
+    }
+  ]
+}
+
+  Abstract syntax tree JSON string:
+    {
+  "name": "ProgramContext",
+  "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF>",
+  "children": [
+    {
+      "name": "ExecutableProgramContext",
+      "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator",
+      "children": [
+        {
+          "name": "ProgramUnitContext",
+          "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator",
+          "children": [
+            {
+              "name": "MainProgramContext",
+              "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator",
+              "children": [
+                {
+                  "name": "ProgramStmtContext",
+                  "text": "programCalculator",
+                  "children": [
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "program",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "TerminalNodeImpl",
+                      "text": "Calculator",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "MainRangeContext",
+                  "text": "implicitnoneprint*,2*7+3endprogramCalculator",
+                  "children": [
+                    {
+                      "name": "BodyContext",
+                      "text": "implicitnoneprint*,2*7+3",
+                      "children": [
+                        {
+                          "name": "BodyConstructContext",
+                          "text": "implicitnone",
+                          "children": [
+                            {
+                              "name": "SpecificationPartConstructContext",
+                              "text": "implicitnone",
+                              "children": [
+                                {
+                                  "name": "ImplicitStmtContext",
+                                  "text": "implicitnone",
+                                  "children": [
+                                    {
+                                      "name": "TerminalNodeImpl",
+                                      "text": "implicit",
+                                      "children": [
+                                      ]
+                                    },
+                                    {
+                                      "name": "TerminalNodeImpl",
+                                      "text": "none",
+                                      "children": [
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "BodyConstructContext",
+                          "text": "print*,2*7+3",
+                          "children": [
+                            {
+                              "name": "ExecutableConstructContext",
+                              "text": "print*,2*7+3",
+                              "children": [
+                                {
+                                  "name": "ActionStmtContext",
+                                  "text": "print*,2*7+3",
+                                  "children": [
+                                    {
+                                      "name": "PrintStmtContext",
+                                      "text": "print*,2*7+3",
+                                      "children": [
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": "print",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "FormatIdentifierContext",
+                                          "text": "*",
+                                          "children": [
+                                            {
+                                              "name": "TerminalNodeImpl",
+                                              "text": "*",
+                                              "children": [
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "TerminalNodeImpl",
+                                          "text": ",",
+                                          "children": [
+                                          ]
+                                        },
+                                        {
+                                          "name": "OutputItemListContext",
+                                          "text": "2*7+3",
+                                          "children": [
+                                            {
+                                              "name": "ExpressionContext",
+                                              "text": "2*7+3",
+                                              "children": [
+                                                {
+                                                  "name": "Level5ExprContext",
+                                                  "text": "2*7+3",
+                                                  "children": [
+                                                    {
+                                                      "name": "EquivOperandContext",
+                                                      "text": "2*7+3",
+                                                      "children": [
+                                                        {
+                                                          "name": "OrOperandContext",
+                                                          "text": "2*7+3",
+                                                          "children": [
+                                                            {
+                                                              "name": "AndOperandContext",
+                                                              "text": "2*7+3",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Level4ExprContext",
+                                                                  "text": "2*7+3",
+                                                                  "children": [
+                                                                    {
+                                                                      "name": "Level3ExprContext",
+                                                                      "text": "2*7+3",
+                                                                      "children": [
+                                                                        {
+                                                                          "name": "Level2ExprContext",
+                                                                          "text": "2*7+3",
+                                                                          "children": [
+                                                                            {
+                                                                              "name": "AddOperandContext",
+                                                                              "text": "2*7",
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "2",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "2",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "2",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "UnsignedArithmeticConstantContext",
+                                                                                              "text": "2",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "TerminalNodeImpl",
+                                                                                                  "text": "2",
+                                                                                                  "children": [
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "name": "TerminalNodeImpl",
+                                                                                  "text": "*",
+                                                                                  "children": [
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "7",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "7",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "7",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "UnsignedArithmeticConstantContext",
+                                                                                              "text": "7",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "TerminalNodeImpl",
+                                                                                                  "text": "7",
+                                                                                                  "children": [
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "name": "TerminalNodeImpl",
+                                                                              "text": "+",
+                                                                              "children": [
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "name": "AddOperandContext",
+                                                                              "text": "3",
+                                                                              "children": [
+                                                                                {
+                                                                                  "name": "MultOperandContext",
+                                                                                  "text": "3",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "name": "Level1ExprContext",
+                                                                                      "text": "3",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "name": "PrimaryContext",
+                                                                                          "text": "3",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "name": "UnsignedArithmeticConstantContext",
+                                                                                              "text": "3",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "name": "TerminalNodeImpl",
+                                                                                                  "text": "3",
+                                                                                                  "children": [
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "EndProgramStmtContext",
+                      "text": "endprogramCalculator",
+                      "children": [
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "end",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "program",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "TerminalNodeImpl",
+                          "text": "Calculator",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TerminalNodeImpl",
+      "text": "<EOF>",
+      "children": [
+      ]
+    }
+  ]
+}
+
+  Parse tree DOT string:
+    strict digraph ParseTree {
+  node [shape=box];
+"0" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF> \n\lToken Count:: \n29 \n\lToken Range:: \n0 - 29 \n\lLine Count:: \n4 \n\lLine Range:: \n1 - 5 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"0" -> "1" 
+"1" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n27 \n\lToken Range:: \n0 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"1" -> "2" 
+"2" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n27 \n\lToken Range:: \n0 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"2" -> "3" 
+"3" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n27 \n\lToken Range:: \n0 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"3" -> "4" 
+"4" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramCalculator \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram Calculator
+ \n"] 
+"4" -> "5" 
+"5" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram Calculator
+ \n"] 
+"4" -> "6" 
+"6" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nCalculator \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram Calculator
+ \n"] 
+"3" -> "7" 
+"7" [label="\lRule:: \nMainRangeContext \n\lValue:: \nimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n23 \n\lToken Range:: \n4 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"7" -> "8" 
+"8" [label="\lRule:: \nBodyContext \n\lValue:: \nimplicitnoneprint*,2*7+3 \n\lToken Count:: \n17 \n\lToken Range:: \n4 - 21 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"8" -> "9" 
+"9" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"9" -> "10" 
+"10" [label="\lRule:: \nSpecificationPartConstructContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"10" -> "11" 
+"11" [label="\lRule:: \nImplicitStmtContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"11" -> "12" 
+"12" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nimplicit \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"11" -> "13" 
+"13" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"8" -> "14" 
+"14" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"14" -> "15" 
+"15" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"15" -> "16" 
+"16" [label="\lRule:: \nActionStmtContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"16" -> "17" 
+"17" [label="\lRule:: \nPrintStmtContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"17" -> "18" 
+"18" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprint \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"17" -> "19" 
+"19" [label="\lRule:: \nFormatIdentifierContext \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n10 - 10 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"19" -> "20" 
+"20" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n10 - 10 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"17" -> "21" 
+"21" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n, \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"17" -> "22" 
+"22" [label="\lRule:: \nOutputItemListContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"22" -> "23" 
+"23" [label="\lRule:: \nExpressionContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"23" -> "24" 
+"24" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"24" -> "25" 
+"25" [label="\lRule:: \nEquivOperandContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"25" -> "26" 
+"26" [label="\lRule:: \nOrOperandContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"26" -> "27" 
+"27" [label="\lRule:: \nAndOperandContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"27" -> "28" 
+"28" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"28" -> "29" 
+"29" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"29" -> "30" 
+"30" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"30" -> "31" 
+"31" [label="\lRule:: \nAddOperandContext \n\lValue:: \n2*7 \n\lToken Count:: \n4 \n\lToken Range:: \n13 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"31" -> "32" 
+"32" [label="\lRule:: \nMultOperandContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"32" -> "33" 
+"33" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"33" -> "34" 
+"34" [label="\lRule:: \nPrimaryContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"34" -> "35" 
+"35" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"35" -> "36" 
+"36" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"31" -> "37" 
+"37" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n4 \n\lToken Range:: \n13 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"31" -> "38" 
+"38" [label="\lRule:: \nMultOperandContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"38" -> "39" 
+"39" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"39" -> "40" 
+"40" [label="\lRule:: \nPrimaryContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"40" -> "41" 
+"41" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"41" -> "42" 
+"42" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"30" -> "43" 
+"43" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n+ \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"30" -> "44" 
+"44" [label="\lRule:: \nAddOperandContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"44" -> "45" 
+"45" [label="\lRule:: \nMultOperandContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"45" -> "46" 
+"46" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"46" -> "47" 
+"47" [label="\lRule:: \nPrimaryContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"47" -> "48" 
+"48" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"48" -> "49" 
+"49" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"7" -> "50" 
+"50" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramCalculator \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"50" -> "51" 
+"51" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"50" -> "52" 
+"52" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"50" -> "53" 
+"53" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nCalculator \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"0" -> "54" 
+"54" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n29 \n\lToken Range:: \n0 - 29 \n\lLine Count:: \n4 \n\lLine Range:: \n1 - 5 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+}
+
+
+  Abstract syntax tree DOT string:
+    strict digraph ParseTree {
+  node [shape=box];
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF>029" [label="\lRule:: \nProgramContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF> \n\lToken Count:: \n29 \n\lToken Range:: \n0 - 29 \n\lLine Count:: \n4 \n\lLine Range:: \n1 - 5 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF>029" -> "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator027" 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator027" [label="\lRule:: \nExecutableProgramContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n27 \n\lToken Range:: \n0 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator027" [label="\lRule:: \nProgramUnitContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n27 \n\lToken Range:: \n0 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator027" [label="\lRule:: \nMainProgramContext \n\lValue:: \nprogramCalculatorimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n27 \n\lToken Range:: \n0 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator027" -> "programCalculator02" 
+"programCalculator02" [label="\lRule:: \nProgramStmtContext \n\lValue:: \nprogramCalculator \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram Calculator
+ \n"] 
+"programCalculator02" -> "program02" 
+"program02" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram Calculator
+ \n"] 
+"programCalculator02" -> "Calculator02" 
+"Calculator02" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nCalculator \n\lToken Count:: \n2 \n\lToken Range:: \n0 - 2 \n\lLine Count:: \n0 \n\lLine Range:: \n1 - 1 \n\lSource Code:: \nprogram Calculator
+ \n"] 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator027" -> "implicitnoneprint*,2*7+3endprogramCalculator427" 
+"implicitnoneprint*,2*7+3endprogramCalculator427" [label="\lRule:: \nMainRangeContext \n\lValue:: \nimplicitnoneprint*,2*7+3endprogramCalculator \n\lToken Count:: \n23 \n\lToken Range:: \n4 - 27 \n\lLine Count:: \n3 \n\lLine Range:: \n1 - 4 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"implicitnoneprint*,2*7+3endprogramCalculator427" -> "implicitnoneprint*,2*7+3421" 
+"implicitnoneprint*,2*7+3421" [label="\lRule:: \nBodyContext \n\lValue:: \nimplicitnoneprint*,2*7+3 \n\lToken Count:: \n17 \n\lToken Range:: \n4 - 21 \n\lLine Count:: \n2 \n\lLine Range:: \n1 - 3 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"implicitnoneprint*,2*7+3421" -> "implicitnone46" 
+"implicitnone46" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"implicitnone46" [label="\lRule:: \nSpecificationPartConstructContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"implicitnone46" [label="\lRule:: \nImplicitStmtContext \n\lValue:: \nimplicitnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"implicitnone46" -> "implicit46" 
+"implicit46" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nimplicit \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"implicitnone46" -> "none46" 
+"none46" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nnone \n\lToken Count:: \n2 \n\lToken Range:: \n4 - 6 \n\lLine Count:: \n1 \n\lLine Range:: \n1 - 2 \n\lSource Code:: \nprogram Calculator
+  implicit none
+ \n"] 
+"implicitnoneprint*,2*7+3421" -> "print*,2*7+3821" 
+"print*,2*7+3821" [label="\lRule:: \nBodyConstructContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" [label="\lRule:: \nExecutableConstructContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" [label="\lRule:: \nActionStmtContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" [label="\lRule:: \nPrintStmtContext \n\lValue:: \nprint*,2*7+3 \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" -> "print821" 
+"print821" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprint \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" -> "*1010" 
+"*1010" [label="\lRule:: \nFormatIdentifierContext \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n10 - 10 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"*1010" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n0 \n\lToken Range:: \n10 - 10 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" -> ",821" 
+",821" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n, \n\lToken Count:: \n13 \n\lToken Range:: \n8 - 21 \n\lLine Count:: \n1 \n\lLine Range:: \n2 - 3 \n\lSource Code:: \n  implicit none
+  print *, 2 * 7 + 3  
+ \n"] 
+"print*,2*7+3821" -> "2*7+31321" 
+"2*7+31321" [label="\lRule:: \nOutputItemListContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nExpressionContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nLevel5ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nEquivOperandContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nOrOperandContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nAndOperandContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nLevel4ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nLevel3ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" [label="\lRule:: \nLevel2ExprContext \n\lValue:: \n2*7+3 \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" -> "2*71317" 
+"2*71317" [label="\lRule:: \nAddOperandContext \n\lValue:: \n2*7 \n\lToken Count:: \n4 \n\lToken Range:: \n13 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*71317" -> "21313" 
+"21313" [label="\lRule:: \nMultOperandContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"21313" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"21313" [label="\lRule:: \nPrimaryContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"21313" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"21313" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n2 \n\lToken Count:: \n0 \n\lToken Range:: \n13 - 13 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*71317" -> "*1317" 
+"*1317" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n* \n\lToken Count:: \n4 \n\lToken Range:: \n13 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*71317" -> "71717" 
+"71717" [label="\lRule:: \nMultOperandContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"71717" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"71717" [label="\lRule:: \nPrimaryContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"71717" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"71717" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n7 \n\lToken Count:: \n0 \n\lToken Range:: \n17 - 17 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" -> "+1321" 
+"+1321" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n+ \n\lToken Count:: \n8 \n\lToken Range:: \n13 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"2*7+31321" -> "32121" 
+"32121" [label="\lRule:: \nAddOperandContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"32121" [label="\lRule:: \nMultOperandContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"32121" [label="\lRule:: \nLevel1ExprContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"32121" [label="\lRule:: \nPrimaryContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"32121" [label="\lRule:: \nUnsignedArithmeticConstantContext \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"32121" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n3 \n\lToken Count:: \n0 \n\lToken Range:: \n21 - 21 \n\lLine Count:: \n0 \n\lLine Range:: \n3 - 3 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+ \n"] 
+"implicitnoneprint*,2*7+3endprogramCalculator427" -> "endprogramCalculator2327" 
+"endprogramCalculator2327" [label="\lRule:: \nEndProgramStmtContext \n\lValue:: \nendprogramCalculator \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"endprogramCalculator2327" -> "end2327" 
+"end2327" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nend \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"endprogramCalculator2327" -> "program2327" 
+"program2327" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nprogram \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"endprogramCalculator2327" -> "Calculator2327" 
+"Calculator2327" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \nCalculator \n\lToken Count:: \n4 \n\lToken Range:: \n23 - 27 \n\lLine Count:: \n1 \n\lLine Range:: \n3 - 4 \n\lSource Code:: \n  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+"programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF>029" -> "<EOF>029" 
+"<EOF>029" [label="\lRule:: \nTerminalNodeImpl \n\lValue:: \n<EOF> \n\lToken Count:: \n29 \n\lToken Range:: \n0 - 29 \n\lLine Count:: \n4 \n\lLine Range:: \n1 - 5 \n\lSource Code:: \nprogram Calculator
+  implicit none
+  print *, 2 * 7 + 3  
+end program Calculator
+ \n"] 
+}
+
+
+  Tokens JSON:
+    {"tokens":[{"type":5,"text":"program","start":0,"stop":6},{"type":119,"text":" ","start":7,"stop":7},{"type":188,"text":"Calculator","start":8,"stop":17},{"type":119,"text":"\n  ","start":18,"stop":20},{"type":41,"text":"implicit","start":21,"stop":28},{"type":119,"text":" ","start":29,"stop":29},{"type":42,"text":"none","start":30,"stop":33},{"type":119,"text":"\n  ","start":34,"stop":36},{"type":74,"text":"print","start":37,"stop":41},{"type":119,"text":" ","start":42,"stop":42},{"type":192,"text":"*","start":43,"stop":43},{"type":122,"text":",","start":44,"stop":44},{"type":119,"text":" ","start":45,"stop":45},{"type":186,"text":"2","start":46,"stop":46},{"type":119,"text":" ","start":47,"stop":47},{"type":192,"text":"*","start":48,"stop":48},{"type":119,"text":" ","start":49,"stop":49},{"type":186,"text":"7","start":50,"stop":50},{"type":119,"text":" ","start":51,"stop":51},{"type":132,"text":"+","start":52,"stop":52},{"type":119,"text":" ","start":53,"stop":53},{"type":186,"text":"3","start":54,"stop":54},{"type":119,"text":"  \n","start":55,"stop":57},{"type":12,"text":"end","start":58,"stop":60},{"type":119,"text":" ","start":61,"stop":61},{"type":5,"text":"program","start":62,"stop":68},{"type":119,"text":" ","start":69,"stop":69},{"type":188,"text":"Calculator","start":70,"stop":79},{"type":119,"text":"\n","start":80,"stop":80},{"type":-1,"text":"\u003cEOF\u003e","start":81,"stop":80}]}
+
+  Token Count: 30
+  Start line number: 1
+  End line number: 5
+
+  Antlr4 Parse Tree String: 
+    (program (executableProgram (programUnit (mainProgram (programStmt program Calculator) (mainRange (body (bodyConstruct (specificationPartConstruct (implicitStmt implicit none))) (bodyConstruct (executableConstruct (actionStmt (printStmt print (formatIdentifier *) , (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 2)))) * (multOperand (level1Expr (primary (unsignedArithmeticConstant 7))))) + (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 3))))))))))))))))))) (endProgramStmt end program Calculator))))) <EOF>)
