@@ -2,7 +2,7 @@
 FortranAS or Fortran Abstract Syntax is a FORTRAN parse tree and abstract syntax
 tree generation tool based off of antlr4.
 It takes as input a fortran source file and generates a parse tree and abstract
-syntax tree both as a dot file, json file, SVG file and JSON files.
+syntax tree a graphviz dot file, SVG file and JSON files.
 
 This tool support any Fortran version with grammer provided by:
 [grammars-v4 🔗](https://github.com/antlr/grammars-v4/tree/master/fortran) 
