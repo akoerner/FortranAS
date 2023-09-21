@@ -1,7 +1,11 @@
 
 ARG PROJECT="FortranAS"
 ARG REQUIREMENTS_FILE="requirements.system"
-ARG FORTRAN_AS_LAUNCHER_SCRIPT=fortranas
+
+ARG USER
+ARG UID
+ARG GID
+
 
 ## graphviz 2.49.0 is needed because support for conversions to png was dropped
 ## in newer versions e.g., `dot -T png some_file.dot some_file.png`
@@ -79,6 +83,9 @@ WORKDIR /app
 FROM fortran_as_builder AS fortran_as_runtime
 
 ARG PROJECT
+ARG USER
+ARG UID
+ARG GID
 
 
 COPY --from=fortran_as_builder /app/build /app/build
@@ -89,5 +96,13 @@ WORKDIR /
 
 COPY docker/entrypoint.sh . 
 RUN chmod +x entrypoint.sh
+
+RUN useradd -ms /bin/bash ${USER}
+RUN usermod -u ${UID} ${USER} && groupmod -g ${GID} ${USER}
+RUN chown -r ${UID}:${GID} /app | true
+RUN chown ${UID}:${GID} /entrypoint.sh
+
+
+USER ${USER}
 CMD ["/entrypoint.sh"]
 
