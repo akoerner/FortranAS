@@ -4,11 +4,11 @@ tree generation tool based off of antlr4.
 It takes as input a fortran source file and generates a parse tree and abstract
 syntax tree a graphviz dot file, SVG file and JSON files.
 
-This tool support any Fortran version with grammer provided by:
+- This tool support any Fortran version with grammer provided by:
 [grammars-v4 🔗](https://github.com/antlr/grammars-v4/tree/master/fortran) 
-
-FortranAS can be run locally with a fully self contained jar or with the
+- FortranAS can be run locally with a fully self contained jar or with the
 provided docker context.
+- FortranAS can be compiled via docker or locally with the provided maven project (requires JDK 19+).
 
 ## Background
 FortranAS leverages [ANTLR4 🔗](https://www.antlr.org/) and 
