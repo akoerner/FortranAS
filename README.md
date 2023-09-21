@@ -115,7 +115,7 @@ or
 
 In order to compile and package with maven you must first run the code
 generation. This involves the following process:
-![Build process](build_process.png)
+![Build process](build_process.svg)
 
 If built and packaged with make and docker you can simply invoke the build make
 target:
