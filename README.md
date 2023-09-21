@@ -12,17 +12,13 @@ provided docker context.
 
 ## Background
 FortranAS leverages [ANTLR4 🔗](https://www.antlr.org/) and 
-[grammars-v4 🔗](https://github.com/antlr/grammars-v4/tree/master/fortran)
+[grammars-v4 🔗](https://github.com/antlr/grammars-v4/tree/master/fortran) to generate parsers and lexers
 to to deconstruct FORTRAN source file and generate and serialize parse trees and
 abstract syntax trees to the 
-[GraphViz DOT language](https://graphviz.org/doc/info/lang.html) and json. The 
-end goal is to be able to do code clone detection.
+[GraphViz DOT language](https://graphviz.org/doc/info/lang.html) and JSON.
 
-This project includes a gnu Makefile to build/generate the ANTLR4 lexers and
-parsers, as well as, docker context.
-
-GraphViz via the `dot` command is used to convert the output dot files to SVG.
-GraphViz via the `dot` command is used to convert the output dot files to PNG.
+This project includes a gnu Makefile to build/generate the Antlr4 lexers and
+parsers, as well as, docker context for both antlr4 and FortranAS.
 
 ## Supported Fortran versions
 FortranAS in theory supports any fortran version that has associate grammars in
