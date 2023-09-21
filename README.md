@@ -39,6 +39,11 @@ FortranAS supports the following transformations:
 ## Prerequisites
 You must have GNU Make and Docker installed.
 
+For local builds you need JDK 19+ and Maven installed.
+
+For runtime FortranAS requires graphviz to be installed. This is provided as
+part of a docker context if you wish to run FortranAS via docker.
+
 > **ℹ️INFO:**
 > FortranAS can only be built on Linux with Docker and GNU Make installed.  
 > For local builds JDK 19 or better is required.  
@@ -62,7 +67,7 @@ make run_demo
 The example will process all Fortran files provided in the `fortran_code_samples` 
 directory.
 
-Alternatively, you can drop your Fortran source code into the `fortran_source`
+Alternatively, you can drop your Fortran source code into the `source`
 directory and run:
 ```bash
 make run
@@ -114,15 +119,9 @@ or
 ## Generated Code
 
 In order to compile and package with maven you must first run the code
-generation. This involves the following process:
-![Build process](build_process.svg)
-![alt text](build_process.svg)
-
-If built and packaged with make and docker you can simply invoke the build make
-target:
-```bash
-make build
-```
+generation. If run via make and docker this occurs as a part of the `build` 
+make target. If you are building locally with maven then it occurs as part of 
+the maven `generate-sources` life cycle phase.
 
 If you wish to work with FortranAS using an IDE code generation occures during
 the maven `generate-sources` life-cycle phase. This will happen during a
