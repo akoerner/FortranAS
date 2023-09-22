@@ -104,17 +104,17 @@ private static String escapeDOT(String text) {
         return lines.toString();
     }
 
-    public static String toJSON(ParseTree tree, List<Token> tokens, char[] source) {
-        return ParseTreeConverter.toJSON(tree, tokens, source, true);
+    public static String toJSON(ParseTree tree, List<Token> tokens, char[] source, String lexerClassName) {
+        return ParseTreeConverter.toJSON(tree, tokens, source, true, lexerClassName);
     }
 
-    public static String toJSON(ParseTree tree, List<Token> tokens, char[] source, boolean prettyPrint) {
-        return prettyPrint ? PRETTY_PRINT_GSON.toJson(toMap(tree, tokens, source)) : GSON.toJson(toMap(tree, tokens, source));
+    public static String toJSON(ParseTree tree, List<Token> tokens, char[] source, boolean prettyPrint, String lexerClassName) {
+        return prettyPrint ? PRETTY_PRINT_GSON.toJson(toMap(tree, tokens, source, lexerClassName)) : GSON.toJson(toMap(tree, tokens, source, lexerClassName));
     }
 
-    public static Map<String, Object> toMap(ParseTree tree, List<Token> tokens, char[] source) {
+    public static Map<String, Object> toMap(ParseTree tree, List<Token> tokens, char[] source, String lexerClassName) {
         Map<String, Object> map = new LinkedHashMap<>();
-        traverse(tree, tokens, map, source);
+        traverse(tree, tokens, map, source, lexerClassName);
         return map;
 
     }
@@ -124,7 +124,7 @@ private static String escapeDOT(String text) {
         return hash.substring(hash.length() - 5);
     }
 
-    public static void traverse(ParseTree tree, List<Token> tokens, Map<String, Object> map, char[] source) {
+    public static void traverse(ParseTree tree, List<Token> tokens, Map<String, Object> map, char[] source, String lexerClassName) {
 
         Map<String, Object> data = new LinkedHashMap<>();
         if (tree instanceof TerminalNodeImpl) {
@@ -141,7 +141,7 @@ private static String escapeDOT(String text) {
             map.put("textSHA256", sha256(token.getText()));
             map.put("index", token.getTokenIndex());
             map.put("type", token.getType());
-            map.put("type", TokenLoader.getTokenName(token.getType()));
+            map.put("type", TokenLoader.getTokenName(token.getType(), lexerClassName));
             map.put("string", token.toString());
         } else {
             List<Map<String, Object>> children = new ArrayList<>();
@@ -167,7 +167,7 @@ private static String escapeDOT(String text) {
             for (int i = 0; i < tree.getChildCount(); i++) {
                 Map<String, Object> nested = new LinkedHashMap<>();
                 children.add(nested);
-                traverse(tree.getChild(i), tokens, nested, source);
+                traverse(tree.getChild(i), tokens, nested, source, lexerClassName);
             }
         }
     }
@@ -206,19 +206,19 @@ private static String escapeDOT(String text) {
         }
     }
 
-    public static String toDOT(ParseTree tree, List<Token> tokens, char[] source) {
-        return toDOT(toMap(tree, tokens, source));
+    public static String toDOT(ParseTree tree, List<Token> tokens, char[] source, String lexerClassName) {
+        return toDOT(toMap(tree, tokens, source, lexerClassName), lexerClassName);
     }
 
-    public static String toDOT(Map<String, Object> tree) {
+    public static String toDOT(Map<String, Object> tree, String lexerClassName) {
         StringBuilder dotBuilder = new StringBuilder();
         dotBuilder.append("digraph Tree {\n");
-        traverse(tree, dotBuilder);
+        traverse(tree, dotBuilder, lexerClassName);
         dotBuilder.append("}\n");
         return dotBuilder.toString();
     }
 
-    private static void traverse(Map<String, Object> node, StringBuilder dotBuilder) {
+    private static void traverse(Map<String, Object> node, StringBuilder dotBuilder, String lexerClassName) {
 
         if(node == null){
            return;
@@ -255,7 +255,7 @@ private static String escapeDOT(String text) {
             } else {
                 childHash = "\"" + (String)child.get("hash") + "\"";
                 dotBuilder.append(hash).append(" -> ").append(childHash).append("\n");
-                traverse(child, dotBuilder);
+                traverse(child, dotBuilder, lexerClassName);
             }
         }
 

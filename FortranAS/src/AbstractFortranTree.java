@@ -48,7 +48,7 @@ class AbstractFortranTree {
         this.data.put("lexerClassName", lexerClassName);
 
         String parserClassName =this.getParser().getClass().getName();
-        this.data.put("parserClassName", lexerClassName);
+        this.data.put("parserClassName", parserClassName);
 
         int tokenEndNumber = this.getParseTree().getSourceInterval().b;
         this.data.put("tokenEndNumber", tokenEndNumber);
@@ -116,7 +116,6 @@ class AbstractFortranTree {
         return builder.toString();
     } 
 
-
     public Lexer getLexer() throws Exception {
         //if (this.lexer == null) {
         this.lexer = Antlr4LexerLoader.loadLexer(this.lexerClassName, (String)this.data.get("fortranSourceFile"));
@@ -134,7 +133,7 @@ class AbstractFortranTree {
     
     private Map<String, Object> getPT() throws IOException, Exception{
         if (this.pt == null){ 
-            this.pt = ParseTreeConverter.toMap(this.getParseTree(), this.getTokens(), this.getSource()); 
+            this.pt = ParseTreeConverter.toMap(this.getParseTree(), this.getTokens(), this.getSource(), (String)this.data.get("lexerClassName")); 
         }
         return this.pt;
     }
@@ -230,7 +229,7 @@ class AbstractFortranTree {
         FileTools.writeFile(abstractSyntaxTreeJSONFileName, abstractSyntaxTreeJSONFileContents);
 
         String abstractSyntaxTreeDOTFileName = outputDirectory + fortranSourceFile + ".abstract_syntax_tree.dot";
-        String abstractSyntaxTreeDOTFileContents = ParseTreeConverter.toDOT(this.getAST());
+        String abstractSyntaxTreeDOTFileContents = ParseTreeConverter.toDOT(this.getAST(), (String)this.data.get("lexerClassName"));
         FileTools.mkdirp(abstractSyntaxTreeDOTFileName);
         FileTools.writeFile(abstractSyntaxTreeDOTFileName, abstractSyntaxTreeDOTFileContents);
 
@@ -242,7 +241,7 @@ class AbstractFortranTree {
         FileTools.writeFile(parseTreeJSONFileName, parseTreeJSONFileContents);
         
         String parseTreeDOTFileName = outputDirectory + fortranSourceFile + ".parse_tree.dot";
-        String parseTreeDOTFileContents = ParseTreeConverter.toDOT(this.getPT());
+        String parseTreeDOTFileContents = ParseTreeConverter.toDOT(this.getPT(), (String)this.data.get("lexerClassName"));
         //String parseTreeDOTFileContents = ParseTreeConverter.toDOT(this.getParseTree(), this.getTokens(), this.getSource());
         FileTools.mkdirp(parseTreeDOTFileName);
         FileTools.writeFile(parseTreeDOTFileName, parseTreeDOTFileContents);

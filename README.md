@@ -152,5 +152,8 @@ To see some sample output files please visit the provided readme: [example_outpu
 ## Development Notes
 FortranAS is a work-in-progress.
 
+The following items still need work:
+- The AST needs more processing, pruning and manipulation to remove unnecessary nodes.
+- Proper exception handling. 
 
 ## Literature
