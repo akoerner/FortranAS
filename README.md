@@ -129,7 +129,6 @@ standard maven compile or you can manually invoke code generation with:
 ```bash
 mvn generate-sources
 ```
-This will invoke the first two steps in previously depicted build process. 
 
 ## Build artifacts
 When invoking `make build` all associated build artifacts will be located in 
