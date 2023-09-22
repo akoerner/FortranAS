@@ -49,7 +49,7 @@ jobs:
       - name: Build
         run: |
           df -h
-          source make build
+          make build
       - name: Run Demo 
         run: |
           df -h
