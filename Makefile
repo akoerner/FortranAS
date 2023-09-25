@@ -75,7 +75,8 @@ check_source_dir:
 #TEST_PROGRAM=TreeMergerTest
 #TEST_PROGRAM=TreeCloner
 #TEST_PROGRAM=TreeSerializer
-TEST_PROGRAM=Tree
+#TEST_PROGRAM=Tree
+TEST_PROGRAM=DOTGenerator
 .PHONY: run_test_program
 run_test_program:
 	cd FortranAS/src && javac ${TEST_PROGRAM}.java && java ${TEST_PROGRAM} && rm ${TEST_PROGRAM}.class
@@ -85,7 +86,6 @@ run:
 	sudo rm -rf output
 	mkdir -p output
 	docker run \
-        -it \
         --name ${PROJECT} \
         --rm \
         -v ${SOURCE_DIRECTORY}:/app/fortran_code_samples \
@@ -104,7 +104,6 @@ build_fast:
 .PHONY: list_lexers
 list_lexers: build_fast ## List available antlr4 lexers that FortranAS can provide
 	@docker run \
-        -it \
         --name ${PROJECT} \
         --rm \
         -v ${SOURCE_DIRECTORY}:/tmp/src \
@@ -138,7 +137,7 @@ save_system_requirements:
 clean: docker_clean ## Clean build directory, docker images, and output directory
 	cd antlr4 && make clean
 	rm -rf build
-	rm -rf FortranAS/src/generated
+	bash tools/clean.sh
 	sudo rm -rf output
 	cd ${SOURCE_DIRECTORY} && shopt -s nullglob && rm -f *.{pt,svg,dot,json,log,txt}; shopt -u nullglob
 	rm -rf ${OUTPUT_DIRECTORY}

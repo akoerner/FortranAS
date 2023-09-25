@@ -8,9 +8,9 @@
     <maven.compiler.source>19</maven.compiler.source>
     <maven.compiler.target>19</maven.compiler.target>
     <antlr.version>4.13.0</antlr.version>
-    <src.dir>FortranAS/src</src.dir>
+    <src.dir>FortranAS/src/</src.dir>
     <build.dir>build</build.dir>
-    <project.groupId>org.fortran-as</project.groupId>
+    <project.groupId>org.fortranas</project.groupId>
     <project.mainClass>FortranAS</project.mainClass>
 </properties>
 
@@ -18,7 +18,29 @@
 <artifactId>FortranAS</artifactId>
 <version>1.0</version>
 
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit-bom</artifactId>
+            <version>5.10.0</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
 <dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>32.1.2-jre</version>
+    </dependency>
     <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr4</artifactId>
@@ -67,6 +89,9 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                <includes>
+                    <include>${src.dir}/org/fortranas/antlr4/generated/antlr4/**/*.java</include>
+                </includes>
                 </configuration>
             </plugin>
             <plugin>

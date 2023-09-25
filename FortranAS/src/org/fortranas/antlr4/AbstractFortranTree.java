@@ -1,3 +1,7 @@
+package org.fortranas;
+
+import org.fortranas.antlr4.generated.antlr4.*;
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -140,7 +144,30 @@ class AbstractFortranTree {
 
     private Map<String, Object> getAST() throws IOException, Exception{
         if (this.ast == null){
-            this.ast = Tree.merge(Tree.clone(this.getPT()), "text");
+            this.ast = Tree.clone(this.getPT());
+            Map<String, Object> pruneOn = new HashMap<String, Object>();
+            pruneOn.put("text", "Program *");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "implicit");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "none");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "implicit none");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "<EOF>");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "program");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "end program *");
+            Tree.prune(this.ast, pruneOn);
+            pruneOn.put("text", "program *");
+            Tree.prune(this.ast, pruneOn);
+            //Tree.promote(this.ast, Map.of("name", "Level2Expr"), Map.of("tokenName", "PLUS"));
+            //Tree.promote(this.ast, Map.of("name", "AddOperand"), Map.of("tokenName", "STAR"));
+            this.ast = Tree.merge(this.ast, "text");
+
+            //Tree.promote(this.ast, Map.of("name", "OutputItemList"), Map.of("tokenName", "PLUS"));
+            //Tree.promote(this.ast, Map.of("name", "AddOperand"), Map.of("tokenName", "STAR"));
         }
         return this.ast;
     }
@@ -229,7 +256,7 @@ class AbstractFortranTree {
         FileTools.writeFile(abstractSyntaxTreeJSONFileName, abstractSyntaxTreeJSONFileContents);
 
         String abstractSyntaxTreeDOTFileName = outputDirectory + fortranSourceFile + ".abstract_syntax_tree.dot";
-        String abstractSyntaxTreeDOTFileContents = ParseTreeConverter.toDOT(this.getAST(), (String)this.data.get("lexerClassName"));
+        String abstractSyntaxTreeDOTFileContents = ParseTreeConverter.toDOT(this.getAST(), (String)this.data.get("lexerClassName"), false);
         FileTools.mkdirp(abstractSyntaxTreeDOTFileName);
         FileTools.writeFile(abstractSyntaxTreeDOTFileName, abstractSyntaxTreeDOTFileContents);
 
@@ -241,7 +268,7 @@ class AbstractFortranTree {
         FileTools.writeFile(parseTreeJSONFileName, parseTreeJSONFileContents);
         
         String parseTreeDOTFileName = outputDirectory + fortranSourceFile + ".parse_tree.dot";
-        String parseTreeDOTFileContents = ParseTreeConverter.toDOT(this.getPT(), (String)this.data.get("lexerClassName"));
+        String parseTreeDOTFileContents = ParseTreeConverter.toDOT(this.getPT(), (String)this.data.get("lexerClassName"), true);
         //String parseTreeDOTFileContents = ParseTreeConverter.toDOT(this.getParseTree(), this.getTokens(), this.getSource());
         FileTools.mkdirp(parseTreeDOTFileName);
         FileTools.writeFile(parseTreeDOTFileName, parseTreeDOTFileContents);

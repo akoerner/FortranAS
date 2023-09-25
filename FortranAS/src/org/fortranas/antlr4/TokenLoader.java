@@ -1,3 +1,5 @@
+package org.fortranas;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,11 +11,12 @@ public class TokenLoader {
 
     private static Map<String, Integer> tokenMap = new HashMap<String, Integer>();
 
-    public static Map<String, Integer> loadTokens(String lexerClassName) {
-        Map<String, Integer> tokenMap = new HashMap<>();
+    public static void loadTokens(String lexerClassName) {
 
         String tokenDirectoryName = lexerClassName.replace("Lexer", "").toLowerCase();
-        InputStream inputStream = TokenLoader.class.getResourceAsStream("/fortran/" + tokenDirectoryName + "/" + lexerClassName + ".tokens");
+        String tokenFile = "/fortran/" + tokenDirectoryName + "/" + lexerClassName + ".tokens";
+        System.out.println("Loading token file: " + tokenFile);
+        InputStream inputStream = TokenLoader.class.getResourceAsStream(tokenFile);
 
         if (inputStream != null) {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
@@ -33,11 +36,10 @@ public class TokenLoader {
             System.err.println("ERROR: " + lexerClassName + ".tokens file not found in the JAR.");
         }
 
-        return tokenMap;
     }
 
     public static String getTokenName(int tokenType, String lexerClassName) {
-        if (TokenLoader.tokenMap == null){
+        if (TokenLoader.tokenMap.size() == 0){
             TokenLoader.loadTokens(lexerClassName);
         }
         for (Map.Entry<String, Integer> entry : TokenLoader.tokenMap.entrySet()) {

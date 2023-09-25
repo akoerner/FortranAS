@@ -1,12 +1,15 @@
+package org.fortranas;
+
+import org.fortranas.antlr4.generated.*;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.Interval;
 import org.antlr.v4.runtime.*;
 
-public class Abstract_LEXER_ extends _LEXER_ {
+public class AbstractFortran90Lexer extends Fortran90Lexer {
     private int currentLine = 1;
 
-    public Abstract_LEXER_(CharStream input) {
+    public AbstractFortran90Lexer(CharStream input) {
         super(input);
     }
 

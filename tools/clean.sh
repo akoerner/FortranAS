@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+#set -euxo pipefail #debug mode
 
 echoerr (){ printf "%s" "$@" >&2;}
 exiterr (){ printf "%s\n" "$@" >&2; exit 1;}
@@ -10,18 +11,6 @@ FORTRAN_AS_BASE_DIRECTORY=$(realpath "${SCRIPT_DIRECTORY}/..")
 SOURCE_DIRECTORY="${FORTRAN_AS_BASE_DIRECTORY}/FortranAS/src"
 TEMPLATE_DIRECTORY="${SOURCE_DIRECTORY}/org/fortranas/antlr4/templates"
 OUTPUT_DIRECTORY="${SOURCE_DIRECTORY}/org/fortranas/antlr4/generated"
-ANTLR4_DIRECTORY="${FORTRAN_AS_BASE_DIRECTORY}/antlr4"
 
-
-cd "${ANTLR4_DIRECTORY}"
-if [ -f /.docker ]; then
-    echo "Cannot build grammars in docker, skipping build of grammars.";
-else
-    echo "Building Antlr4 grammars...";
-    (cd "${ANTLR4_DIRECTORY}" && make)
-fi
-
-mkdir -p "${OUTPUT_DIRECTORY}"
-echo "OUTPUT_DIRECTORY: ${OUTPUT_DIRECTORY}"
-cp "${ANTLR4_DIRECTORY}/generated"/* "${OUTPUT_DIRECTORY}/antlr4/" -r
-
+echo "Cleaning OUTPUT_DIRECTORY: ${OUTPUT_DIRECTORY}"
+rm -rf "${OUTPUT_DIRECTORY}"

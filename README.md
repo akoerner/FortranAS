@@ -155,4 +155,15 @@ The following items still need work:
 - The AST needs more processing, pruning and manipulation to remove unnecessary nodes.
 - Proper exception handling. 
 
+## Conversion strategy from parse tree to abstract syntax tree
+Converting a parse tree to an abstract syntax tree is a difficult problem.
+Some of the following strategies will be explored: 
+- Merging (Implemented)
+Any child node withe identical source text to the parent node will be merged
+- Pruning
+Removing nodes that do not add significant meaning to to the overall tree
+structure.
+- Promoting
+
+
 ## Literature

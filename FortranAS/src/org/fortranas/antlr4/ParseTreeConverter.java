@@ -1,3 +1,5 @@
+package org.fortranas;
+
 import java.lang.StringBuilder;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
@@ -140,8 +142,9 @@ private static String escapeDOT(String text) {
             map.put("text", token.getText());
             map.put("textSHA256", sha256(token.getText()));
             map.put("index", token.getTokenIndex());
-            map.put("type", token.getType());
-            map.put("type", TokenLoader.getTokenName(token.getType(), lexerClassName));
+            map.put("tokenType", token.getType());
+            map.put("tokenName", TokenLoader.getTokenName(token.getType(), lexerClassName));
+            System.out.println("tokenType: " + map.get("tokenType") + " tokenName: " + map.get("tokenName"));
             map.put("string", token.toString());
         } else {
             List<Map<String, Object>> children = new ArrayList<>();
@@ -154,7 +157,7 @@ private static String escapeDOT(String text) {
             String hash = getShortHash(name + "_" + startTokenNumber + "_" + endTokenNumber);
             map.put("rule", name);
             map.put("name", name);
-            map.put("nodeType", (String)"rule");
+            map.put("nodeType", "rule");
             map.put("hash", hash);
             map.put("startTokenNumber", startTokenNumber);
             map.put("stopTokenNumber", endTokenNumber);
@@ -206,19 +209,19 @@ private static String escapeDOT(String text) {
         }
     }
 
-    public static String toDOT(ParseTree tree, List<Token> tokens, char[] source, String lexerClassName) {
-        return toDOT(toMap(tree, tokens, source, lexerClassName), lexerClassName);
+    public static String toDOT(ParseTree tree, List<Token> tokens, char[] source, String lexerClassName, Boolean includeMetadata) {
+        return toDOT(toMap(tree, tokens, source, lexerClassName), lexerClassName, includeMetadata);
     }
 
-    public static String toDOT(Map<String, Object> tree, String lexerClassName) {
+    public static String toDOT(Map<String, Object> tree, String lexerClassName, Boolean includeMetadata) {
         StringBuilder dotBuilder = new StringBuilder();
         dotBuilder.append("digraph Tree {\n");
-        traverse(tree, dotBuilder, lexerClassName);
+        traverse(tree, dotBuilder, lexerClassName, includeMetadata);
         dotBuilder.append("}\n");
         return dotBuilder.toString();
     }
 
-    private static void traverse(Map<String, Object> node, StringBuilder dotBuilder, String lexerClassName) {
+    private static void traverse(Map<String, Object> node, StringBuilder dotBuilder, String lexerClassName, Boolean includeMetadata) {
 
         if(node == null){
            return;
@@ -228,12 +231,16 @@ private static String escapeDOT(String text) {
         String hash = "\"" + (String)node.get("hash") + "\"";
         //String hash = "\"" + (String)node.get("textSHA256") + "\"";
         String name = (String)node.get("name");
-        String nodeLabel = escapeDOT("name: "        + name + "\n" + 
-                                     "hash: "        + (String)node.get("hash") + "\n" + 
-                                     "textHash: "    + getShortHash((String)node.get("textSHA256")) +"\n" + 
-                                     "nodeType: "    + (String)node.get("nodeType") + "\n" + 
-                                     "text: \n\n"    + (String)node.get("text")+ "");
-        //nodeLabel = escapeDOT((String)node.get("text")); 
+        String nodeLabel;
+        if(includeMetadata){
+            nodeLabel = escapeDOT("name: "        + name + "\n" + 
+                                   "hash: "        + (String)node.get("hash") + "\n" + 
+                                   "textHash: "    + getShortHash((String)node.get("textSHA256")) +"\n" + 
+                                   "nodeType: "    + (String)node.get("nodeType") + "\n" + 
+                                   "text: \n\n"    + (String)node.get("text")+ "");
+        } else {
+            nodeLabel = escapeDOT((String)node.get("text")); 
+        }
         dotBuilder.append(hash).append(" [shape=record " + "label=\"" + nodeLabel + "\"]\n");
 
         if (children == null) return;
@@ -242,20 +249,24 @@ private static String escapeDOT(String text) {
             if (((String)child.get("nodeType")).equals("token")) {
                 childHash = "\"" + (String)child.get("hash") + "\"";
                 //childHash = "\"" + (String)child.get("textSHA256") + "\"";
-                String childNodeLabel = escapeDOT("tokenType: "   +         child.get("type") + "\n" + 
-                                                  "tokenName: "   + (String)child.get("typeName") + "\n" +
-                                                  "hash: "        + (String)child.get("hash") + "\n" +
-                                                  "textHash: "    + getShortHash((String)child.get("textSHA256")) + "\n" +
-                                                  "nodeType: "    + (String)child.get("nodeType") + "\n" +
-                                                  "tokenIndex: "  + (int)child.get("index") + "\n" +
-                                                  "text: \n\n"    + (String)child.get("text") + "");
-                //childNodeLabel = escapeDOT((String)child.get("text")); 
+                String childNodeLabel;
+                if(includeMetadata){
+                    childNodeLabel = escapeDOT("tokenType: "   +         child.get("tokenType") + "\n" + 
+                                               "tokenName: "   + (String)child.get("tokenName") + "\n" +
+                                               "hash: "        + (String)child.get("hash") + "\n" +
+                                               "textHash: "    + getShortHash((String)child.get("textSHA256")) + "\n" +
+                                               "nodeType: "    + (String)child.get("nodeType") + "\n" +
+                                               "tokenIndex: "  + (int)child.get("index") + "\n" +
+                                               "text: \n\n"    + (String)child.get("text") + "");
+                } else {
+                    childNodeLabel = escapeDOT((String)child.get("text")); 
+                }
                 dotBuilder.append(childHash).append(" [shape=record " + "label=\"" + childNodeLabel + "\"]\n");
                 dotBuilder.append(hash).append(" -> ").append(childHash).append("\n");
             } else {
                 childHash = "\"" + (String)child.get("hash") + "\"";
                 dotBuilder.append(hash).append(" -> ").append(childHash).append("\n");
-                traverse(child, dotBuilder, lexerClassName);
+                traverse(child, dotBuilder, lexerClassName, includeMetadata);
             }
         }
 

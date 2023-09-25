@@ -1,3 +1,6 @@
+package org.fortranas;
+
+import org.fortranas.antlr4.generated.*;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
@@ -62,6 +65,14 @@ public class Antlr4ParserLoader {
 
     public static ParseTree getParseTree(Parser parser){
         ParseTree parseTree = null;
+        //_FORTRAN_PARSERS_//
+
+        if (parser instanceof Fortran77Parser) {
+            parseTree = ((Fortran77Parser) parser).program();
+        }
+        if (parser instanceof Fortran90Parser) {
+            parseTree = ((Fortran90Parser) parser).program();
+        }
         //_FORTRAN_PARSERS_//
 
         return parseTree;
