@@ -8,7 +8,8 @@
     <maven.compiler.source>19</maven.compiler.source>
     <maven.compiler.target>19</maven.compiler.target>
     <antlr.version>4.13.0</antlr.version>
-    <src.dir>FortranAS/src/</src.dir>
+    <src.dir>FortranAS/src</src.dir>
+    <src.dir.antlr4generated>${src.dir}/org/fortranas/antlr4/generated/fortran</src.dir.antlr4generated>
     <build.dir>build</build.dir>
     <project.groupId>org.fortranas</project.groupId>
     <project.mainClass>FortranAS</project.mainClass>
@@ -35,7 +36,6 @@
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
-        <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>com.google.guava</groupId>
@@ -75,9 +75,16 @@
     <testSourceDirectory>${src.dir}/org/fortranas/test</testSourceDirectory>
     <resources>
         <resource>
-            <directory>${src.dir}/org/fortranas/antlr4/generated</directory>
+            <directory>${src.dir.antlr4generated}</directory>
             <includes>
                 <include>**/*.tokens</include>
+            </includes>
+        </resource>
+        <resource>
+            <directory>${src.dir}</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>**/*.json</include>
             </includes>
         </resource>
     </resources>
@@ -85,6 +92,11 @@
         <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.1.2</version>
+            <configuration>
+                <additionalClasspathElements>
+                    <additionalClasspathElement>${src.dir.antlr4generated}</additionalClasspathElement>
+                </additionalClasspathElements>
+            </configuration>
         </plugin>
         <plugin>
             <artifactId>exec-maven-plugin</artifactId>
@@ -93,6 +105,16 @@
                 <execution>
                     <id>clean-generated</id>
                     <phase>generate-sources</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                        <executable>${basedir}/tools/clean.sh</executable>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>clean</id>
+                    <phase>clean</phase>
                     <goals>
                         <goal>exec</goal>
                     </goals>
@@ -149,12 +171,6 @@
             <configuration>
                 <source>${maven.compiler.source}</source>
                 <target>${maven.compiler.target}</target>
-                <excludes>
-                    <exclude>antlr4/generated</exclude>
-                </excludes>
-                <includes>
-                    <include>${src.dir}/org/fortranas/antlr4/generated/antlr4/**/*.java</include>
-                </includes>
             </configuration>
         </plugin>
         <plugin>
@@ -165,7 +181,7 @@
                 <outputDirectory>${build.dir}</outputDirectory>
                 <archive>
                     <manifest>
-                        <mainClass>FortranAS</mainClass>
+                        <mainClass>${project.mainClass}</mainClass>
                     </manifest>
                 </archive>
             </configuration>

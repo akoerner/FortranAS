@@ -7,7 +7,6 @@ exiterr (){ printf "%s\n" "$@" >&2; exit 1;}
 
 SCRIPT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-
 FORTRAN_AS_BASE_DIRECTORY=$(realpath "${SCRIPT_DIRECTORY}/..")
 LEXER_INJECT_NEEDLE="_LEXER_"
 SOURCE_DIRECTORY="${FORTRAN_AS_BASE_DIRECTORY}/FortranAS/src"

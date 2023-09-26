@@ -1,0 +1,49 @@
+{
+  "name": "Program",
+  "text": "programCalculatorimplicitnoneprint*,2*7+3endprogramCalculator<EOF>",
+  "children": [
+    {
+      "name": "Body",
+      "text": "This is branch 1",
+      "children": [
+        {
+          "name": "Leaf1",
+          "text": "This is leaf 1 of branch 1"
+        },
+        {
+          "name": "Leaf2",
+          "text": "This is leaf 2 of branch 1"
+        }
+      ]
+    },
+    {
+      "name": "Branch2",
+      "text": "This is branch 2",
+      "children": [
+        {
+          "name": "Leaf3",
+          "text": "This is leaf 3 of branch 2"
+        }
+      ]
+    },
+    {
+      "name": "Branch3",
+      "text": "This is branch 3",
+      "children": [
+        {
+          "name": "Leaf4",
+          "text": "This is leaf 4 of branch 3"
+        },
+        {
+          "name": "Leaf5",
+          "text": "This is leaf 5 of branch 3"
+        },
+        {
+          "name": "Leaf6",
+          "text": "This is leaf 6 of branch 3"
+        }
+      ]
+    }
+  ]
+}
+

@@ -148,7 +148,6 @@ docker_clean:
 	docker rmi $$(docker images -q ${PROJECT}:${TAG}) --force 2> /dev/null || true
 	docker rmi $$(docker images --filter "dangling=true" -q) --force > /dev/null 2>&1 || true
 
-.PHONY: run_cytoscape
-run_cytoscape:
-	@echo open http://localhost:6080/vnc.html
-	docker run -v ${ROOT_DIR}/output:/output -p 6080:6080 cytoscape/cytoscape-desktop:3.9.1
+.PHONY: test
+test: ## Run unit tests
+	mvn test

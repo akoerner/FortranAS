@@ -9,7 +9,7 @@ SCRIPT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 FORTRAN_AS_BASE_DIRECTORY=$(realpath "${SCRIPT_DIRECTORY}/..")
 SOURCE_DIRECTORY="${FORTRAN_AS_BASE_DIRECTORY}/FortranAS/src"
 TEMPLATE_DIRECTORY="${SOURCE_DIRECTORY}/org/fortranas/antlr4/templates"
-OUTPUT_DIRECTORY="${SOURCE_DIRECTORY}/org/fortranas/antlr4/generated"
+OUTPUT_DIRECTORY="${SOURCE_DIRECTORY}/org/fortranas/antlr4/generated/fortran"
 ANTLR4_DIRECTORY="${FORTRAN_AS_BASE_DIRECTORY}/antlr4"
 
 
@@ -23,5 +23,5 @@ fi
 
 mkdir -p "${OUTPUT_DIRECTORY}"
 echo "OUTPUT_DIRECTORY: ${OUTPUT_DIRECTORY}"
-cp "${ANTLR4_DIRECTORY}/generated"/* "${OUTPUT_DIRECTORY}/antlr4/" -r
+cp "${ANTLR4_DIRECTORY}/generated/fortran"/* "${OUTPUT_DIRECTORY}" -r
 

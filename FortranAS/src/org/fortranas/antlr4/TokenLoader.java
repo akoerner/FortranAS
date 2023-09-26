@@ -1,4 +1,3 @@
-package org.fortranas;
 
 import java.io.BufferedReader;
 import java.io.IOException;

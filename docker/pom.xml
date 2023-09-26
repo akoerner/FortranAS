@@ -8,7 +8,8 @@
     <maven.compiler.source>19</maven.compiler.source>
     <maven.compiler.target>19</maven.compiler.target>
     <antlr.version>4.13.0</antlr.version>
-    <src.dir>FortranAS/src/</src.dir>
+    <src.dir>FortranAS/src</src.dir>
+    <src.dir.antlr4generated>${src.dir}/org/fortranas/antlr4/generated/fortran</src.dir.antlr4generated>
     <build.dir>build</build.dir>
     <project.groupId>org.fortranas</project.groupId>
     <project.mainClass>FortranAS</project.mainClass>
@@ -30,11 +31,11 @@
     </dependencies>
 </dependencyManagement>
 
+
 <dependencies>
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
-        <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>com.google.guava</groupId>
@@ -68,67 +69,79 @@
     </dependency>
 </dependencies>
 
-
-
 <build>
     <sourceDirectory>${src.dir}</sourceDirectory>
     <directory>${build.dir}</directory>
+    <testSourceDirectory>${src.dir}/org/fortranas/test</testSourceDirectory>
     <resources>
         <resource>
-            <directory>antlr4/generated</directory>
+            <directory>${src.dir.antlr4generated}</directory>
             <includes>
                 <include>**/*.tokens</include>
             </includes>
         </resource>
+        <resource>
+            <directory>${src.dir}</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>**/*.json</include>
+            </includes>
+        </resource>
     </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+                <additionalClasspathElements>
+                    <additionalClasspathElement>${src.dir.antlr4generated}</additionalClasspathElement>
+                </additionalClasspathElements>
+            </configuration>
+        </plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+            <source>${maven.compiler.source}</source>
+            <target>${maven.compiler.target}</target>
+        </configuration>
+    </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+            <outputDirectory>${build.dir}</outputDirectory>
+            <archive>
+                <manifest>
+                    <mainClass>${project.mainClass}</mainClass>
+                </manifest>
+            </archive>
+        </configuration>
+    </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>shade</goal>
+                </goals>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                <includes>
-                    <include>${src.dir}/org/fortranas/antlr4/generated/antlr4/**/*.java</include>
-                </includes>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <transformers>
+                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                            <mainClass>${project.mainClass}</mainClass>
+                        </transformer>
+                    </transformers>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <outputDirectory>${build.dir}</outputDirectory>
-                    <archive>
-                        <manifest>
-                            <mainClass>FortranAS</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>${project.mainClass}</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+            </execution>
+        </executions>
+    </plugin>
+</plugins>
+</build>
 </project>
 

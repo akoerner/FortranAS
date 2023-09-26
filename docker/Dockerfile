@@ -44,15 +44,16 @@ RUN bash save_system_requirements.sh "${REQUIREMENTS_FILE}"
 FROM fortran_as_requirements_base AS fortran_as_maven_dependencies_base
 
 WORKDIR /app
-COPY docker/pom_docker.xml /app/pom.xml
+COPY docker/pom.xml /app/pom.xml
 COPY docker/settings.xml .
 COPY docker/settings.xml /root/.m2/settings.xml
 
+COPY docker/FortranAS/src/org/fortranas/test/InitTest.java FortranAS/src/org/fortranas/test/InitTest.java
 
 RUN mkdir -p /app/repo && \
-    mvn dependency:go-offline -Dmaven.repo.local=/app/repo
+    mvn dependency:go-offline verify compile test -Dmaven.repo.local=/app/repo
 
-RUN mvn verify clean --fail-never
+RUN mvn verify compile test -Dmaven.repo.local=/app/repo
 
 FROM fortran_as_maven_dependencies_base AS fortran_as_source_code_base 
 
@@ -73,8 +74,8 @@ COPY antlr4/ antlr4
 COPY tools/ tools
 run touch /.docker
 
-RUN mvn -o compile && \ 
-    mvn -o package 
+RUN mvn -o compile -Dmaven.repo.local=/app/repo && \ 
+    mvn -o package -Dmaven.repo.local=/app/repo
 
 COPY tools/fortranas /app/build/fortranas 
 WORKDIR /app

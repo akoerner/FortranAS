@@ -1,5 +1,7 @@
 output
+antlr4/generated
 FortranAS/src/org/fortranas/generated
+FortranAS/generated
 build
 **a.out
 source

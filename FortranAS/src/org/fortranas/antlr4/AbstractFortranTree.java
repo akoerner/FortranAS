@@ -1,6 +1,4 @@
-package org.fortranas;
 
-import org.fortranas.antlr4.generated.antlr4.*;
 
 import java.util.Map;
 import java.util.HashMap;

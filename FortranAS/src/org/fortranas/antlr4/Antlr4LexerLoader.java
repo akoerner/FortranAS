@@ -1,6 +1,4 @@
-package org.fortranas;
 
-import org.fortranas.*;
 
 
 import java.io.File;

@@ -1,6 +1,4 @@
-package org.fortranas;
 
-import org.fortranas.antlr4.generated.*;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
@@ -37,7 +35,6 @@ public class Antlr4ParserLoader {
         CommonTokenStream tokenStream = new CommonTokenStream(lexer); 
  
         try {
-            // Get the path to the parser Java source file
             String searchPath = "/app/src/main/java/";
             String parserClassFileName = parserClassName + ".java";
             String sourceFilePath = FileTools.find(searchPath, parserClassFileName);

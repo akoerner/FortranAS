@@ -1,6 +1,5 @@
-package org.fortranas;
 
-import org.fortranas.antlr4.generated.*;
+
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.Interval;
