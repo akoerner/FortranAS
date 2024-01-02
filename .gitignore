@@ -1,0 +1,14 @@
+output
+antlr4/generated
+FortranAS/src/org/fortranas/generated
+FortranAS/src/org/fortranas/antlr4/generated
+FortranAS/generated
+build
+**a.out
+source
+.idea
+tools/graphviz
+*.log**
+**.sqlite3
+**.sqlite3-journal
+**.png
