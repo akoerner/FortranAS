@@ -60,17 +60,19 @@ jobs:
           path: build/FortranAS-1.0.zip
           name: FortranAS-v${{ github.run_number }}.zip
       - name: Set on_master environment variable
+        id: set_branch
         run: |
           if [[ "${GITHUB_REF}" == "refs/heads/master" ]]; then
-            echo "on_master=true" >> $GITHUB_ENV
+            on_master=true
           else
-            echo "on_master=false" >> $GITHUB_ENV
+            on_master=false
           fi
+          echo "::set-output name=on_master::$on_master"
           echo "BRANCH: ${GITHUB_REF}"
-          echo "on_master: ${{ steps.check_on_master.outputs.on_master }}"
+          echo "on_master: ${on_master}"
 
       - name: Create Release
-        if: ${{ steps.check_on_master.outputs.on_master }}
+        if: ${{ steps.set_branch.outputs.on_master }}
         id: create_release
         uses: actions/create-release@v1
         env:
