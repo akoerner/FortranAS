@@ -3,8 +3,7 @@
 set -euo pipefail
 
 cd /tmp/FortranAS
-./build/fortranas --lexer Fortran90Lexer \
-                  --output-directory /tmp/FortranAS/output \
+./build/fortranas --output-directory /tmp/FortranAS/output \
                   --input-source-code-directory /tmp/FortranAS/source \
                   --print-fortran-files \
                   --parse-fortran-files \
