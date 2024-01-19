@@ -84,7 +84,7 @@ jobs:
           prerelease: false
 
       - name: Set Release Asset
-        if: ${{ steps.check_on_master.outputs.on_master }}
+        if: ${{ steps.set_branch.outputs.on_master }}
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
