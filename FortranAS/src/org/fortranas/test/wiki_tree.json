@@ -1,0 +1,42 @@
+{
+  "text": "F",
+  "children": [
+    {
+      "text": "B",
+      "children": [
+        {
+          "text": "A",
+          "children": []
+        },
+        {
+          "text": "D",
+          "children": [
+            {
+              "text": "C",
+              "children": []
+            },
+            {
+              "text": "F",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "G",
+      "children": [
+        {
+          "text": "I",
+          "children": [
+            {
+              "text": "H",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

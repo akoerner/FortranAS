@@ -1,0 +1,148 @@
+package org.fortranas;
+
+
+import org.apache.commons.cli.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Enumeration;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import java.io.IOException;
+
+import org.antlr.v4.runtime.*;
+
+import java.io.File;
+import java.util.function.Consumer;
+
+import java.util.List;
+
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+
+public class FortranASTest {
+
+    public static void main(String[] args) {
+
+            Path currentDirectory = FileSystems.getDefault().getPath("").toAbsolutePath();
+            Path baseDirectory = currentDirectory;
+            System.out.println("baseDirectory: " + baseDirectory);
+            String inputDirectory = baseDirectory + "/source";
+            System.out.println("inputDirectory: " + inputDirectory);
+            File inputDirFile = new File(inputDirectory);
+            if (!inputDirFile.exists() || !inputDirFile.isDirectory()) {
+                throw new IllegalArgumentException("ERROR: Input source code directory does not exist or is not a directory.");
+            }
+
+            String outputDirectory = baseDirectory + "/output";
+            createDirectory(outputDirectory);
+
+            String lexer = "Fortran90Lexer";
+            if (!isLexer(lexer)) {
+                throw new IllegalArgumentException("Lexer '" + lexer + "' does not exist.");
+            }
+
+            System.out.println("  Using:");
+            System.out.println("    input source code directory: " + inputDirectory);
+            System.out.println("    output directory: " + outputDirectory);
+            System.out.println("    lexer Name: " + lexer);
+
+
+            FortranASTest.processFortranFiles(outputDirectory, inputDirectory, ".f90");
+
+    }
+
+    private static void printHelp(Options options) {
+        HelpFormatter formatter = new HelpFormatter();
+        int helpWidth = 100;
+        formatter.setWidth(helpWidth);
+        String header = "FortranAS is a Fortran parsing tool based off of antlr4\n\n";
+        String footer = "\nPlease report issues at https://https://github.com/akoerner/FortranAS/issues";
+
+        formatter.printHelp("fortranas", header, options, footer, true);
+    }
+
+    private static String getDefaultOutputDirectory() {
+        String currentDir = System.getProperty("user.dir");
+        return currentDir + File.separator + "output";
+    }
+
+    private static void createDirectory(String directoryPath) {
+        File directory = new File(directoryPath);
+        if (!directory.exists()) {
+            try {
+                if (directory.mkdirs()) {
+                    System.out.println("Created output directory: " + directoryPath);
+                } else {
+                    throw new IOException("Failed to create output directory: " + directoryPath);
+                }
+            } catch (IOException e) {
+                System.err.println("Error creating output directory: " + e.getMessage());
+                System.exit(1);
+            }
+        }
+    }
+
+    public static void listLexers() {
+        System.out.println("Available Fortran Lexers: ");
+        List<String> classes = JarClassLoader.getClasses();
+        for (String file : classes) {
+            if (isLexer(file)) {
+                System.out.println("  " + file);
+            }
+        }
+        System.out.println("  use with: fortranas --lexer <lexer name> ...");
+    }
+
+    public static boolean isLexer(String needle) {
+        needle = needle.trim();
+        String regexPattern = "^Fortran\\d+Lexer$";
+        Pattern pattern = Pattern.compile(regexPattern);
+        Matcher matcher = pattern.matcher(needle);
+
+        return matcher.matches();
+    }
+
+    private static void processFiles(File directory, String fileExtension, Consumer<File> processFunction) {
+        File[] files = directory.listFiles();
+
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    processFiles(file, fileExtension, processFunction);
+                } else if (file.getName().endsWith(fileExtension)) {
+                    processFunction.accept(file);
+                }
+            }
+        }
+    }
+
+
+    private static void processFortranFiles(String outputDirectory, String sourceDirectory, String fileExtension){
+
+        Consumer<File> processFunction = (file) -> {
+            System.out.println("Processing file: " + file.getAbsolutePath());
+
+            try {
+                AbstractFortranTree abstractFortranTree = new AbstractFortranTree(file.getAbsolutePath());
+                abstractFortranTree.saveOutputFiles(outputDirectory, sourceDirectory);
+            } catch (IOException e) {
+                System.err.println("An IOException occurred while processing files: " + e.getMessage());
+                e.printStackTrace();
+            } catch (Exception e) {
+                System.err.println("Exception occurred while processing files: " + e.getMessage());
+                e.printStackTrace();
+            }
+        };
+         processFiles(new File(sourceDirectory), fileExtension, processFunction);
+
+    }
+
+
+
+
+}
+
+
+

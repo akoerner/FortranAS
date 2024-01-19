@@ -1,0 +1,302 @@
+{
+  "fortranSourceFile": "source/fortran_code_samples/loop.f90",
+  "tokenEndNumber": 47,
+  "antlr4ParseTreeString": "(program (executableProgram (programUnit (mainProgram (programStmt program loop) (mainRange (body (bodyConstruct (specificationPartConstruct (implicitStmt implicit none))) (bodyConstruct (specificationPartConstruct (declarationConstruct (typeDeclarationStmt (typeSpec integer) :: (entityDeclList (entityDecl (objectName i))))))) (bodyConstruct (executableConstruct (doConstruct (blockDoConstruct do (commaLoopControl (loopControl (variableName i) \u003d (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 0))))))))))))) , (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 9))))))))))))))) (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (nameDataRef i)))))))))))))))))) (endDoStmt end do))))) (bodyConstruct (executableConstruct (actionStmt (stopStmt stop))))) (endProgramStmt end program loop))))) \u003cEOF\u003e)",
+  "tokenStartNumber": 0,
+  "lexerClassName": "Fortran90Lexer",
+  "endLineNumber": 11,
+  "tokensString": "[@0,0:6\u003d\u0027program\u0027,\u003c5\u003e,1:0]\n[@1,7:7\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,1:7]\n[@2,8:11\u003d\u0027loop\u0027,\u003c189\u003e,1:8]\n[@3,12:16\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,1:12]\n[@4,17:24\u003d\u0027implicit\u0027,\u003c41\u003e,2:4]\n[@5,25:25\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,2:12]\n[@6,26:29\u003d\u0027none\u0027,\u003c42\u003e,2:13]\n[@7,30:34\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,2:17]\n[@8,35:41\u003d\u0027integer\u0027,\u003c169\u003e,3:4]\n[@9,42:42\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,3:11]\n[@10,43:44\u003d\u0027::\u0027,\u003c30\u003e,3:12]\n[@11,45:45\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,3:14]\n[@12,46:46\u003d\u0027i\u0027,\u003c189\u003e,3:15]\n[@13,47:52\u003d\u0027\\n\\n    \u0027,\u003c119\u003e,channel\u003d1,3:16]\n[@14,53:54\u003d\u0027do\u0027,\u003c57\u003e,5:4]\n[@15,55:55\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:6]\n[@16,56:56\u003d\u0027i\u0027,\u003c189\u003e,5:7]\n[@17,57:57\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:8]\n[@18,58:58\u003d\u0027\u003d\u0027,\u003c131\u003e,5:9]\n[@19,59:59\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:10]\n[@20,60:60\u003d\u00270\u0027,\u003c187\u003e,5:11]\n[@21,61:61\u003d\u0027,\u0027,\u003c122\u003e,5:12]\n[@22,62:62\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:13]\n[@23,63:63\u003d\u00279\u0027,\u003c187\u003e,5:14]\n[@24,64:72\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,5:15]\n[@25,73:77\u003d\u0027write\u0027,\u003c72\u003e,6:8]\n[@26,78:78\u003d\u0027(\u0027,\u003c123\u003e,6:13]\n[@27,79:79\u003d\u0027*\u0027,\u003c193\u003e,6:14]\n[@28,80:80\u003d\u0027,\u0027,\u003c122\u003e,6:15]\n[@29,81:81\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,6:16]\n[@30,82:82\u003d\u0027*\u0027,\u003c193\u003e,6:17]\n[@31,83:83\u003d\u0027)\u0027,\u003c128\u003e,6:18]\n[@32,84:84\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,6:19]\n[@33,85:85\u003d\u0027i\u0027,\u003c189\u003e,6:20]\n[@34,86:90\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,6:21]\n[@35,91:93\u003d\u0027end\u0027,\u003c12\u003e,7:4]\n[@36,94:94\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,7:7]\n[@37,95:96\u003d\u0027do\u0027,\u003c57\u003e,7:8]\n[@38,97:102\u003d\u0027\\n\\n    \u0027,\u003c119\u003e,channel\u003d1,7:10]\n[@39,103:106\u003d\u0027stop\u0027,\u003c68\u003e,9:4]\n[@40,107:107\u003d\u0027\\n\u0027,\u003c119\u003e,channel\u003d1,9:8]\n[@41,108:110\u003d\u0027end\u0027,\u003c12\u003e,10:0]\n[@42,111:111\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:3]\n[@43,112:118\u003d\u0027program\u0027,\u003c5\u003e,10:4]\n[@44,119:119\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:11]\n[@45,120:123\u003d\u0027loop\u0027,\u003c189\u003e,10:12]\n[@46,124:124\u003d\u0027\\n\u0027,\u003c119\u003e,channel\u003d1,10:16]\n[@47,125:124\u003d\u0027\u003cEOF\u003e\u0027,\u003c-1\u003e,11:0]\n",
+  "tokenCount": 48,
+  "tokens": [
+    {
+      "type": 5,
+      "text": "program",
+      "start": 0,
+      "stop": 6
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 7,
+      "stop": 7
+    },
+    {
+      "type": 189,
+      "text": "loop",
+      "start": 8,
+      "stop": 11
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 12,
+      "stop": 16
+    },
+    {
+      "type": 41,
+      "text": "implicit",
+      "start": 17,
+      "stop": 24
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 25,
+      "stop": 25
+    },
+    {
+      "type": 42,
+      "text": "none",
+      "start": 26,
+      "stop": 29
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 30,
+      "stop": 34
+    },
+    {
+      "type": 169,
+      "text": "integer",
+      "start": 35,
+      "stop": 41
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 42,
+      "stop": 42
+    },
+    {
+      "type": 30,
+      "text": "::",
+      "start": 43,
+      "stop": 44
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 45,
+      "stop": 45
+    },
+    {
+      "type": 189,
+      "text": "i",
+      "start": 46,
+      "stop": 46
+    },
+    {
+      "type": 119,
+      "text": "\n\n    ",
+      "start": 47,
+      "stop": 52
+    },
+    {
+      "type": 57,
+      "text": "do",
+      "start": 53,
+      "stop": 54
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 55,
+      "stop": 55
+    },
+    {
+      "type": 189,
+      "text": "i",
+      "start": 56,
+      "stop": 56
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 57,
+      "stop": 57
+    },
+    {
+      "type": 131,
+      "text": "\u003d",
+      "start": 58,
+      "stop": 58
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 59,
+      "stop": 59
+    },
+    {
+      "type": 187,
+      "text": "0",
+      "start": 60,
+      "stop": 60
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 61,
+      "stop": 61
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 62,
+      "stop": 62
+    },
+    {
+      "type": 187,
+      "text": "9",
+      "start": 63,
+      "stop": 63
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 64,
+      "stop": 72
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 73,
+      "stop": 77
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 78,
+      "stop": 78
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 79,
+      "stop": 79
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 80,
+      "stop": 80
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 81,
+      "stop": 81
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 82,
+      "stop": 82
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 83,
+      "stop": 83
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 84,
+      "stop": 84
+    },
+    {
+      "type": 189,
+      "text": "i",
+      "start": 85,
+      "stop": 85
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 86,
+      "stop": 90
+    },
+    {
+      "type": 12,
+      "text": "end",
+      "start": 91,
+      "stop": 93
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 94,
+      "stop": 94
+    },
+    {
+      "type": 57,
+      "text": "do",
+      "start": 95,
+      "stop": 96
+    },
+    {
+      "type": 119,
+      "text": "\n\n    ",
+      "start": 97,
+      "stop": 102
+    },
+    {
+      "type": 68,
+      "text": "stop",
+      "start": 103,
+      "stop": 106
+    },
+    {
+      "type": 119,
+      "text": "\n",
+      "start": 107,
+      "stop": 107
+    },
+    {
+      "type": 12,
+      "text": "end",
+      "start": 108,
+      "stop": 110
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 111,
+      "stop": 111
+    },
+    {
+      "type": 5,
+      "text": "program",
+      "start": 112,
+      "stop": 118
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 119,
+      "stop": 119
+    },
+    {
+      "type": 189,
+      "text": "loop",
+      "start": 120,
+      "stop": 123
+    },
+    {
+      "type": 119,
+      "text": "\n",
+      "start": 124,
+      "stop": 124
+    },
+    {
+      "type": -1,
+      "text": "\u003cEOF\u003e",
+      "start": 125,
+      "stop": 124
+    }
+  ],
+  "startLineNumber": 1,
+  "parserClassName": "Fortran90Parser"
+}

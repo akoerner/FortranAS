@@ -1,0 +1,85 @@
+name: CI 
+on: push
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Init
+        run: |
+          df -h
+          sudo apt-get update
+      - name: Maximize free space
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: true
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+      - name: Freespace Check
+        run: |
+          df -h
+          REQUIRED_FREE_SPACE=10
+          free_space=$(df -h . | awk '{print $4}' | grep "G")
+          free_space="${free_space%G}"
+          if [ -z "$free_space" ]; then
+              echo "ERROR: free_space variable is empty or not set." >&2
+              exit 1
+          fi
+          df -h
+          echo "Free space (required): ${REQUIRED_FREE_SPACE} GB"
+          echo "Free space (available): ${free_space} GB"
+          if (( REQUIRED_FREE_SPACE > free_space )); then
+              echo "ERROR: Insufficient free space: ${free_space} GB available, ${REQUIRED_FREE_SPACE} GB required." >&2
+              exit 1
+          fi
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      - name: Install requirements
+        run: |
+          df -h
+          sudo apt-get update
+          sudo apt-get install -y make
+      - name: Build
+        run: |
+          df -h
+          make build
+      - name: Run Demo 
+        run: |
+          df -h
+          make run_demo
+      - name: Upload Release Asset
+        uses: actions/upload-artifact@v2
+        with:
+          path: build/FortranAS-1.0.zip
+          name: FortranAS-v${{ github.run_number }}.zip
+      - name: Check branch
+        run: echo "::set-output name=on_master::$(echo ${GITHUB_REF} | grep 'refs/heads/master')"
+      - name: Create Release
+        if: ${{ steps.check_on_master.outputs.on_master }}
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+      - name: Set Release Asset
+        if: ${{ steps.check_on_master.outputs.on_master }}
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: build/FortranAS-1.0.zip
+          asset_name: FortranAS-v${{ github.run_number }}.zip
+          asset_content_type: application/zip

@@ -4,6 +4,7 @@ SHELL:=/bin/bash
 
 ROOT_DIR:=$(shell dirname "$(realpath $(firstword $(MAKEFILE_LIST)))")
 
+FORTRANAS_DIRECTORY?=${ROOT_DIR}
 SOURCE_DIRECTORY?=${ROOT_DIR}/source
 OUTPUT_DIRECTORY?=${ROOT_DIR}/output
 
@@ -53,12 +54,11 @@ build: clean generate_sources ## Build FortranAS
                   --build-arg USER=${USER} \
                   -f docker/Dockerfile -t ${PROJECT}:${TAG} --build-arg REQUIREMENTS_FILE=${REQUIREMENTS_FILE} .
 	make copy_build_artifacts
-#	docker build -t dot-converter -f Dockerfile.dot-converter .
+	bash tools/package.sh
 
 .PHONY: build_antlr4_fortran_grammars
 build_antlr4_fortran_grammars: ## Build antlr4 Fortran grammars
 	cd antlr4 && make build
-
 
 .PHONY: package
 package: build
@@ -80,24 +80,29 @@ build_local: ## Build FortranAS locally sans docker using maven. Docker is used 
 check_source_dir:
 	@[ ! -n "$$(find source -type f -not -name "README.txt")" ] && { echo "Error: The 'source' is empty, add Fortran sources and try again." >&2 && exit 1; }
 
-#TEST_PROGRAM=TreeMergerTest
-#TEST_PROGRAM=TreeCloner
-#TEST_PROGRAM=TreeSerializer
-#TEST_PROGRAM=Tree
-TEST_PROGRAM=DOTGenerator
-.PHONY: run_test_program
-run_test_program:
-	cd FortranAS/src && javac ${TEST_PROGRAM}.java && java ${TEST_PROGRAM} && rm ${TEST_PROGRAM}.class
-
 .PHONY: run
-run: 
+run: ## Run FortranAS on FORTRAN source code located in ./source output will be located in ./output 
 	mkdir -p output
 	docker run \
+        --user ${UID}:${GID} \
         --name ${PROJECT} \
         --rm \
-        -v ${SOURCE_DIRECTORY}:/app/fortran_code_samples \
-        -v ${OUTPUT_DIRECTORY}:/app/output \
+        -v ${FORTRANAS_DIRECTORY}:/tmp/FortranAS \
         ${PROJECT}:${TAG}
+
+.PHONY: run_demo
+run_demo: ## Run a complete FortranAS demo on the fortran_code_samples 
+	mkdir -p output
+	cp fortran_code_samples source -r
+	docker run \
+        --user ${UID}:${GID} \
+        --name ${PROJECT} \
+        --rm \
+        -v ${FORTRANAS_DIRECTORY}:/tmp/FortranAS \
+        ${PROJECT}:${TAG}
+	python3 code_clone_analysis/generate_clone_pairs.py
+
+
 
 .PHONY: build_fast
 build_fast: 
@@ -109,21 +114,12 @@ build_fast:
     fi
 
 .PHONY: list_lexers
-list_lexers: build_fast ## List available antlr4 lexers that FortranAS can provide
+list_lexers: build_fast ## List available Antlr4 lexers that FortranAS can provide
 	@docker run \
         --name ${PROJECT} \
         --rm \
-        -v ${SOURCE_DIRECTORY}:/tmp/src \
-        -v ${OUTPUT_DIRECTORY}:/output \
-        ${PROJECT}:${TAG} /bin/bash -c "/app/build/fortranas -l"
-
-.PHONY:
-run_demo: build_fast ## Run FortranAS on sample programs in ./fortran_code_samples. Output will be available in ./output
-	make run SOURCE_DIRECTORY=${ROOT_DIR}/fortran_code_samples 
-
-.PHONY: dot_files_to_html
-dot_files_to_html: 
-	docker run -v ${OUTPUT_DIRECTORY}:/tmp/src dot-converter
+        -v ${FORTRANAS_DIRECTORY}:/tmp/FortranAS \
+        ${PROJECT}:${TAG} /bin/bash -c "build/fortranas -l"
 
 .PHONY: debug
 debug:

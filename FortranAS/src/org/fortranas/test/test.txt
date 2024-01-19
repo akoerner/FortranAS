@@ -1,0 +1,25 @@
+        uuid="95d9a756-5abc-487e-874f-f94f10db7a88";
+        string="( B )";
+        uuid="f64b24f5-0d39-4005-8522-7806adc4d37a";
+        string="( D )";
+        uuid="6ba0c8c9-6228-47ae-a7f1-14ddc4f3e462";
+        string="( E )";
+        uuid="9facc9ac-18df-4fbe-a45a-ea14c2cfacaf";
+        string="( C ( D ) ( E ) )";
+        uuid="b5040b14-66f0-43ad-9205-fded43c5ceb1";
+        string="( F )";
+        uuid="7cea240e-6ef6-443c-92b9-34f556433f19";
+        string="( A ( B ) ( C ( D ) ( E ) ) ( F ) )";
+        
+        uuid="95d9a756-5abc-487e-874f-f94f10db7a88";
+        string="( B )";
+        uuid="f64b24f5-0d39-4005-8522-7806adc4d37a";
+        string="( D )";
+        uuid="6ba0c8c9-6228-47ae-a7f1-14ddc4f3e462";
+        string="( E )";
+        uuid="9facc9ac-18df-4fbe-a45a-ea14c2cfacaf";
+        string="( C ( W ) ( E ) )";
+        uuid="b5040b14-66f0-43ad-9205-fded43c5ceb1";
+        string="( F )";
+        uuid="7cea240e-6ef6-443c-92b9-34f556433f19";
+        string="( A ( B ) ( C ( D ) ( E ) ) ( F ) )";

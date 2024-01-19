@@ -1,0 +1,52 @@
+{
+  "name": "A",
+  "type": 1,
+  "text": "Lorem Ipsum A",
+  "children": [
+    {
+      "name": "B",
+      "type": 2,
+      "text": "Lorem Ipsum B",
+      "children": [
+        {
+          "name": "C",
+          "type": 3,
+          "text": "Lorem Ipsum C",
+          "children": [
+            {
+              "name": "G",
+              "type": 4,
+              "text": "Lorem Ipsum G",
+              "children": []
+            },
+            {
+              "name": "H",
+              "type": 4,
+              "text": "Lorem Ipsum H",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "type": 3,
+          "text": "D",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "E",
+      "type": 2,
+      "text": "Lorem Ipsum E",
+      "children": [
+        {
+          "name": "F",
+          "type": 3,
+          "text": "Lorem Ipsum F",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

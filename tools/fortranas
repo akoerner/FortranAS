@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+#
+# FortranAS Launcher Script
+#
+# This script is the launcher for FortranAS. It checks for the required Java 
+# version and minimum RAM; it also provides cleanup on exit signals and 
+# checks for root user privileges.
+
+echoerr() {
+  printf "%s" "$@" >&2;
+}
+
+exiterr() {
+  printf "%s\n" "$@" >&2; 
+  exit 1;
+}
+
+SCRIPT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+MINIMUM_JAVA_VERSION=19
+
+jar_file=$(find "${SCRIPT_DIRECTORY}" -type f -name 'FortranAS*.jar' -print -quit)
+
+if ! [[ -x "$(command -v java)" ]]; then
+    exiterr "ERROR: JAVA is not installed. Please install Java and try again."
+fi
+
+java_version=$(java -version 2>&1 | grep -i version | awk '{print $3}' | tr -d '"')
+java_major_version=$(echo "$java_version" | cut -d'.' -f1)
+
+if [ -z "$java_version" ]; then
+  exiterr "ERROR: Unable to determine Java version. Install a JRE and try again."
+fi
+
+if [ "$java_major_version" -lt ${MINIMUM_JAVA_VERSION} ]; then
+  exiterr "ERROR: Java version >=${MINIMUM_JAVA_VERSION} required. Current version: $java_version"
+fi
+
+kill -15 $(ps -ef | grep FortranAS | grep ".jar" | awk '{print $2}') > /dev/null 2>&1 || true 
+sleep 1s
+kill -9 $(ps -ef | grep FortranAS | grep ".jar" | awk '{print $2}') > /dev/null 2>&1 || true 
+
+cleanup() {
+    {
+    kill -15 $fortran_as_pid
+    wait $fortran_as_pid
+    } 2> /dev/null || true
+    kill -15 $(ps -ef | grep FortranAS | grep ".jar" | awk '{print $2}') > /dev/null 2>&1 || true 
+    sleep 1s
+    kill -9 $(ps -ef | grep FortranAS |  grep ".jar" | awk '{print $2}') > /dev/null 2>&1 || true 
+    exit $fortran_as_exit_code 2>/dev/null
+}
+
+trap cleanup SIGINT
+
+# Check free RAM and user privileges
+free_ram_g="$(free -h | awk '/^Mem/ {print $4}' | sed 's/Gi//' | awk '{$1=$1};1')"
+if [ "$EUID" -eq 0 ]; then
+    exiterr "ERROR: Do not run as root."
+fi
+
+# Check available free RAM
+if [[ $free_ram_g =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+    free_ram_g="${free_ram_g%%.*}"
+else
+    exiterr "ERROR: Insufficient free memory: ${free_ram_g}; free up some memory and try again."
+fi
+
+if (( $(echo "$free_ram_g < 1" | bc -l) )); then
+    free_ram_g=0
+else
+    free_ram_g=$(printf "%.0f" "$free_ram_g")
+fi
+
+# Check Java installation and free RAM against the minimum required
+MINIMUM_RAM_G=8
+if ((free_ram_g < MINIMUM_RAM_G)); then
+    echo "Insufficient free RAM: $free_ram_g GB free, Minimum required: $MINIMUM_RAM_G GB. Free up some RAM and try again." >&2
+    exit 1
+fi
+
+echo ""
+echo "The following command was used to start FortranAS:"
+set -x; java -Xmx"${free_ram_g}"g -XX:+UseParallelGC -jar  "${jar_file}" "$@" &
+set +x
+echo ""
+
+fortran_as_pid=$!
+wait $fortran_as_pid
+fortran_as_exit_code=$?
+
+cleanup
+

@@ -1,0 +1,3 @@
+        if (parser instanceof FORTRAN_PARSER) {
+            parseTree = ((FORTRAN_PARSER) parser).program();
+        }

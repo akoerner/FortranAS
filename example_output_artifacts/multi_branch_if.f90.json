@@ -1,0 +1,920 @@
+{
+  "fortranSourceFile": "source/fortran_code_samples/multi_branch_if.f90",
+  "tokenEndNumber": 150,
+  "antlr4ParseTreeString": "(program (executableProgram (programUnit (mainProgram (programStmt program MultiBranchIf) (mainRange (body (bodyConstruct (specificationPartConstruct (implicitStmt implicit none))) (bodyConstruct (specificationPartConstruct (declarationConstruct (typeDeclarationStmt (typeSpec integer) :: (entityDeclList (entityDecl (objectName score))))))) (bodyConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Enter your test score:\"))))))))))))))))) (bodyConstruct (executableConstruct (actionStmt (readStmt read (rdCtlSpec ( (rdIoCtlSpecList (unitIdentifier *) , (formatIdentifier *)) )) (inputItemList (inputItem (nameDataRef score))))))) (bodyConstruct (executableConstruct (ifConstruct (ifThenStmt if ( (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (nameDataRef score))))))) (relOp \u003e\u003d) (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 90))))))))))))) ) then) (conditionalBody (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Grade: A\")))))))))))))))))) (elseIfConstruct (elseIfStmt else if ( (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (nameDataRef score))))))) (relOp \u003e\u003d) (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 80))))))))))))) ) then) (conditionalBody (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Grade: B\"))))))))))))))))))) (elseIfConstruct (elseIfStmt else if ( (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (nameDataRef score))))))) (relOp \u003e\u003d) (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 70))))))))))))) ) then) (conditionalBody (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Grade: C\"))))))))))))))))))) (elseIfConstruct (elseIfStmt else if ( (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (nameDataRef score))))))) (relOp \u003e\u003d) (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 60))))))))))))) ) then) (conditionalBody (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Grade: D\"))))))))))))))))))) (elseConstruct (elseStmt else) (conditionalBody (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Grade: F\"))))))))))))))))))) (endIfStmt end if))))) (endProgramStmt end program MultiBranchIf))))) \u003cEOF\u003e)",
+  "tokenStartNumber": 0,
+  "lexerClassName": "Fortran90Lexer",
+  "endLineNumber": 20,
+  "tokensString": "[@0,0:6\u003d\u0027program\u0027,\u003c5\u003e,1:0]\n[@1,7:7\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,1:7]\n[@2,8:20\u003d\u0027MultiBranchIf\u0027,\u003c189\u003e,1:8]\n[@3,21:25\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,1:21]\n[@4,26:33\u003d\u0027implicit\u0027,\u003c41\u003e,2:4]\n[@5,34:34\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,2:12]\n[@6,35:38\u003d\u0027none\u0027,\u003c42\u003e,2:13]\n[@7,39:43\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,2:17]\n[@8,44:50\u003d\u0027integer\u0027,\u003c169\u003e,3:4]\n[@9,51:51\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,3:11]\n[@10,52:53\u003d\u0027::\u0027,\u003c30\u003e,3:12]\n[@11,54:54\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,3:14]\n[@12,55:59\u003d\u0027score\u0027,\u003c189\u003e,3:15]\n[@13,60:65\u003d\u0027\\n\\n    \u0027,\u003c119\u003e,channel\u003d1,3:20]\n[@14,66:70\u003d\u0027write\u0027,\u003c72\u003e,5:4]\n[@15,71:71\u003d\u0027(\u0027,\u003c123\u003e,5:9]\n[@16,72:72\u003d\u0027*\u0027,\u003c193\u003e,5:10]\n[@17,73:73\u003d\u0027,\u0027,\u003c122\u003e,5:11]\n[@18,74:74\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:12]\n[@19,75:75\u003d\u0027*\u0027,\u003c193\u003e,5:13]\n[@20,76:76\u003d\u0027)\u0027,\u003c128\u003e,5:14]\n[@21,77:77\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:15]\n[@22,78:101\u003d\u0027\"Enter your test score:\"\u0027,\u003c178\u003e,5:16]\n[@23,102:106\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,5:40]\n[@24,107:110\u003d\u0027read\u0027,\u003c73\u003e,6:4]\n[@25,111:111\u003d\u0027(\u0027,\u003c123\u003e,6:8]\n[@26,112:112\u003d\u0027*\u0027,\u003c193\u003e,6:9]\n[@27,113:113\u003d\u0027,\u0027,\u003c122\u003e,6:10]\n[@28,114:114\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,6:11]\n[@29,115:115\u003d\u0027*\u0027,\u003c193\u003e,6:12]\n[@30,116:116\u003d\u0027)\u0027,\u003c128\u003e,6:13]\n[@31,117:117\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,6:14]\n[@32,118:122\u003d\u0027score\u0027,\u003c189\u003e,6:15]\n[@33,123:128\u003d\u0027\\n\\n    \u0027,\u003c119\u003e,channel\u003d1,6:20]\n[@34,129:130\u003d\u0027if\u0027,\u003c51\u003e,8:4]\n[@35,131:131\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,8:6]\n[@36,132:132\u003d\u0027(\u0027,\u003c123\u003e,8:7]\n[@37,133:137\u003d\u0027score\u0027,\u003c189\u003e,8:8]\n[@38,138:138\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,8:13]\n[@39,139:140\u003d\u0027\u003e\u003d\u0027,\u003c28\u003e,8:14]\n[@40,141:141\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,8:16]\n[@41,142:143\u003d\u002790\u0027,\u003c187\u003e,8:17]\n[@42,144:144\u003d\u0027)\u0027,\u003c128\u003e,8:19]\n[@43,145:145\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,8:20]\n[@44,146:149\u003d\u0027then\u0027,\u003c52\u003e,8:21]\n[@45,150:158\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,8:25]\n[@46,159:163\u003d\u0027write\u0027,\u003c72\u003e,9:8]\n[@47,164:164\u003d\u0027(\u0027,\u003c123\u003e,9:13]\n[@48,165:165\u003d\u0027*\u0027,\u003c193\u003e,9:14]\n[@49,166:166\u003d\u0027,\u0027,\u003c122\u003e,9:15]\n[@50,167:167\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,9:16]\n[@51,168:168\u003d\u0027*\u0027,\u003c193\u003e,9:17]\n[@52,169:169\u003d\u0027)\u0027,\u003c128\u003e,9:18]\n[@53,170:170\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,9:19]\n[@54,171:180\u003d\u0027\"Grade: A\"\u0027,\u003c178\u003e,9:20]\n[@55,181:185\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,9:30]\n[@56,186:189\u003d\u0027else\u0027,\u003c53\u003e,10:4]\n[@57,190:190\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:8]\n[@58,191:192\u003d\u0027if\u0027,\u003c51\u003e,10:9]\n[@59,193:193\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:11]\n[@60,194:194\u003d\u0027(\u0027,\u003c123\u003e,10:12]\n[@61,195:199\u003d\u0027score\u0027,\u003c189\u003e,10:13]\n[@62,200:200\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:18]\n[@63,201:202\u003d\u0027\u003e\u003d\u0027,\u003c28\u003e,10:19]\n[@64,203:203\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:21]\n[@65,204:205\u003d\u002780\u0027,\u003c187\u003e,10:22]\n[@66,206:206\u003d\u0027)\u0027,\u003c128\u003e,10:24]\n[@67,207:207\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:25]\n[@68,208:211\u003d\u0027then\u0027,\u003c52\u003e,10:26]\n[@69,212:220\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,10:30]\n[@70,221:225\u003d\u0027write\u0027,\u003c72\u003e,11:8]\n[@71,226:226\u003d\u0027(\u0027,\u003c123\u003e,11:13]\n[@72,227:227\u003d\u0027*\u0027,\u003c193\u003e,11:14]\n[@73,228:228\u003d\u0027,\u0027,\u003c122\u003e,11:15]\n[@74,229:229\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,11:16]\n[@75,230:230\u003d\u0027*\u0027,\u003c193\u003e,11:17]\n[@76,231:231\u003d\u0027)\u0027,\u003c128\u003e,11:18]\n[@77,232:232\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,11:19]\n[@78,233:242\u003d\u0027\"Grade: B\"\u0027,\u003c178\u003e,11:20]\n[@79,243:247\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,11:30]\n[@80,248:251\u003d\u0027else\u0027,\u003c53\u003e,12:4]\n[@81,252:252\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:8]\n[@82,253:254\u003d\u0027if\u0027,\u003c51\u003e,12:9]\n[@83,255:255\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:11]\n[@84,256:256\u003d\u0027(\u0027,\u003c123\u003e,12:12]\n[@85,257:261\u003d\u0027score\u0027,\u003c189\u003e,12:13]\n[@86,262:262\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:18]\n[@87,263:264\u003d\u0027\u003e\u003d\u0027,\u003c28\u003e,12:19]\n[@88,265:265\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:21]\n[@89,266:267\u003d\u002770\u0027,\u003c187\u003e,12:22]\n[@90,268:268\u003d\u0027)\u0027,\u003c128\u003e,12:24]\n[@91,269:269\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:25]\n[@92,270:273\u003d\u0027then\u0027,\u003c52\u003e,12:26]\n[@93,274:282\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,12:30]\n[@94,283:287\u003d\u0027write\u0027,\u003c72\u003e,13:8]\n[@95,288:288\u003d\u0027(\u0027,\u003c123\u003e,13:13]\n[@96,289:289\u003d\u0027*\u0027,\u003c193\u003e,13:14]\n[@97,290:290\u003d\u0027,\u0027,\u003c122\u003e,13:15]\n[@98,291:291\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,13:16]\n[@99,292:292\u003d\u0027*\u0027,\u003c193\u003e,13:17]\n[@100,293:293\u003d\u0027)\u0027,\u003c128\u003e,13:18]\n[@101,294:294\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,13:19]\n[@102,295:304\u003d\u0027\"Grade: C\"\u0027,\u003c178\u003e,13:20]\n[@103,305:309\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,13:30]\n[@104,310:313\u003d\u0027else\u0027,\u003c53\u003e,14:4]\n[@105,314:314\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:8]\n[@106,315:316\u003d\u0027if\u0027,\u003c51\u003e,14:9]\n[@107,317:317\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:11]\n[@108,318:318\u003d\u0027(\u0027,\u003c123\u003e,14:12]\n[@109,319:323\u003d\u0027score\u0027,\u003c189\u003e,14:13]\n[@110,324:324\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:18]\n[@111,325:326\u003d\u0027\u003e\u003d\u0027,\u003c28\u003e,14:19]\n[@112,327:327\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:21]\n[@113,328:329\u003d\u002760\u0027,\u003c187\u003e,14:22]\n[@114,330:330\u003d\u0027)\u0027,\u003c128\u003e,14:24]\n[@115,331:331\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:25]\n[@116,332:335\u003d\u0027then\u0027,\u003c52\u003e,14:26]\n[@117,336:344\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,14:30]\n[@118,345:349\u003d\u0027write\u0027,\u003c72\u003e,15:8]\n[@119,350:350\u003d\u0027(\u0027,\u003c123\u003e,15:13]\n[@120,351:351\u003d\u0027*\u0027,\u003c193\u003e,15:14]\n[@121,352:352\u003d\u0027,\u0027,\u003c122\u003e,15:15]\n[@122,353:353\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,15:16]\n[@123,354:354\u003d\u0027*\u0027,\u003c193\u003e,15:17]\n[@124,355:355\u003d\u0027)\u0027,\u003c128\u003e,15:18]\n[@125,356:356\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,15:19]\n[@126,357:366\u003d\u0027\"Grade: D\"\u0027,\u003c178\u003e,15:20]\n[@127,367:371\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,15:30]\n[@128,372:375\u003d\u0027else\u0027,\u003c53\u003e,16:4]\n[@129,376:384\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,16:8]\n[@130,385:389\u003d\u0027write\u0027,\u003c72\u003e,17:8]\n[@131,390:390\u003d\u0027(\u0027,\u003c123\u003e,17:13]\n[@132,391:391\u003d\u0027*\u0027,\u003c193\u003e,17:14]\n[@133,392:392\u003d\u0027,\u0027,\u003c122\u003e,17:15]\n[@134,393:393\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,17:16]\n[@135,394:394\u003d\u0027*\u0027,\u003c193\u003e,17:17]\n[@136,395:395\u003d\u0027)\u0027,\u003c128\u003e,17:18]\n[@137,396:396\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,17:19]\n[@138,397:406\u003d\u0027\"Grade: F\"\u0027,\u003c178\u003e,17:20]\n[@139,407:411\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,17:30]\n[@140,412:414\u003d\u0027end\u0027,\u003c12\u003e,18:4]\n[@141,415:415\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,18:7]\n[@142,416:417\u003d\u0027if\u0027,\u003c51\u003e,18:8]\n[@143,418:418\u003d\u0027\\n\u0027,\u003c119\u003e,channel\u003d1,18:10]\n[@144,419:421\u003d\u0027end\u0027,\u003c12\u003e,19:0]\n[@145,422:422\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,19:3]\n[@146,423:429\u003d\u0027program\u0027,\u003c5\u003e,19:4]\n[@147,430:430\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,19:11]\n[@148,431:443\u003d\u0027MultiBranchIf\u0027,\u003c189\u003e,19:12]\n[@149,444:444\u003d\u0027\\n\u0027,\u003c119\u003e,channel\u003d1,19:25]\n[@150,445:444\u003d\u0027\u003cEOF\u003e\u0027,\u003c-1\u003e,20:0]\n",
+  "tokenCount": 151,
+  "tokens": [
+    {
+      "type": 5,
+      "text": "program",
+      "start": 0,
+      "stop": 6
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 7,
+      "stop": 7
+    },
+    {
+      "type": 189,
+      "text": "MultiBranchIf",
+      "start": 8,
+      "stop": 20
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 21,
+      "stop": 25
+    },
+    {
+      "type": 41,
+      "text": "implicit",
+      "start": 26,
+      "stop": 33
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 34,
+      "stop": 34
+    },
+    {
+      "type": 42,
+      "text": "none",
+      "start": 35,
+      "stop": 38
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 39,
+      "stop": 43
+    },
+    {
+      "type": 169,
+      "text": "integer",
+      "start": 44,
+      "stop": 50
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 51,
+      "stop": 51
+    },
+    {
+      "type": 30,
+      "text": "::",
+      "start": 52,
+      "stop": 53
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 54,
+      "stop": 54
+    },
+    {
+      "type": 189,
+      "text": "score",
+      "start": 55,
+      "stop": 59
+    },
+    {
+      "type": 119,
+      "text": "\n\n    ",
+      "start": 60,
+      "stop": 65
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 66,
+      "stop": 70
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 71,
+      "stop": 71
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 72,
+      "stop": 72
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 73,
+      "stop": 73
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 74,
+      "stop": 74
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 75,
+      "stop": 75
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 76,
+      "stop": 76
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 77,
+      "stop": 77
+    },
+    {
+      "type": 178,
+      "text": "\"Enter your test score:\"",
+      "start": 78,
+      "stop": 101
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 102,
+      "stop": 106
+    },
+    {
+      "type": 73,
+      "text": "read",
+      "start": 107,
+      "stop": 110
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 111,
+      "stop": 111
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 112,
+      "stop": 112
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 113,
+      "stop": 113
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 114,
+      "stop": 114
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 115,
+      "stop": 115
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 116,
+      "stop": 116
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 117,
+      "stop": 117
+    },
+    {
+      "type": 189,
+      "text": "score",
+      "start": 118,
+      "stop": 122
+    },
+    {
+      "type": 119,
+      "text": "\n\n    ",
+      "start": 123,
+      "stop": 128
+    },
+    {
+      "type": 51,
+      "text": "if",
+      "start": 129,
+      "stop": 130
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 131,
+      "stop": 131
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 132,
+      "stop": 132
+    },
+    {
+      "type": 189,
+      "text": "score",
+      "start": 133,
+      "stop": 137
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 138,
+      "stop": 138
+    },
+    {
+      "type": 28,
+      "text": "\u003e\u003d",
+      "start": 139,
+      "stop": 140
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 141,
+      "stop": 141
+    },
+    {
+      "type": 187,
+      "text": "90",
+      "start": 142,
+      "stop": 143
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 144,
+      "stop": 144
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 145,
+      "stop": 145
+    },
+    {
+      "type": 52,
+      "text": "then",
+      "start": 146,
+      "stop": 149
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 150,
+      "stop": 158
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 159,
+      "stop": 163
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 164,
+      "stop": 164
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 165,
+      "stop": 165
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 166,
+      "stop": 166
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 167,
+      "stop": 167
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 168,
+      "stop": 168
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 169,
+      "stop": 169
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 170,
+      "stop": 170
+    },
+    {
+      "type": 178,
+      "text": "\"Grade: A\"",
+      "start": 171,
+      "stop": 180
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 181,
+      "stop": 185
+    },
+    {
+      "type": 53,
+      "text": "else",
+      "start": 186,
+      "stop": 189
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 190,
+      "stop": 190
+    },
+    {
+      "type": 51,
+      "text": "if",
+      "start": 191,
+      "stop": 192
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 193,
+      "stop": 193
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 194,
+      "stop": 194
+    },
+    {
+      "type": 189,
+      "text": "score",
+      "start": 195,
+      "stop": 199
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 200,
+      "stop": 200
+    },
+    {
+      "type": 28,
+      "text": "\u003e\u003d",
+      "start": 201,
+      "stop": 202
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 203,
+      "stop": 203
+    },
+    {
+      "type": 187,
+      "text": "80",
+      "start": 204,
+      "stop": 205
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 206,
+      "stop": 206
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 207,
+      "stop": 207
+    },
+    {
+      "type": 52,
+      "text": "then",
+      "start": 208,
+      "stop": 211
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 212,
+      "stop": 220
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 221,
+      "stop": 225
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 226,
+      "stop": 226
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 227,
+      "stop": 227
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 228,
+      "stop": 228
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 229,
+      "stop": 229
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 230,
+      "stop": 230
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 231,
+      "stop": 231
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 232,
+      "stop": 232
+    },
+    {
+      "type": 178,
+      "text": "\"Grade: B\"",
+      "start": 233,
+      "stop": 242
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 243,
+      "stop": 247
+    },
+    {
+      "type": 53,
+      "text": "else",
+      "start": 248,
+      "stop": 251
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 252,
+      "stop": 252
+    },
+    {
+      "type": 51,
+      "text": "if",
+      "start": 253,
+      "stop": 254
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 255,
+      "stop": 255
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 256,
+      "stop": 256
+    },
+    {
+      "type": 189,
+      "text": "score",
+      "start": 257,
+      "stop": 261
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 262,
+      "stop": 262
+    },
+    {
+      "type": 28,
+      "text": "\u003e\u003d",
+      "start": 263,
+      "stop": 264
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 265,
+      "stop": 265
+    },
+    {
+      "type": 187,
+      "text": "70",
+      "start": 266,
+      "stop": 267
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 268,
+      "stop": 268
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 269,
+      "stop": 269
+    },
+    {
+      "type": 52,
+      "text": "then",
+      "start": 270,
+      "stop": 273
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 274,
+      "stop": 282
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 283,
+      "stop": 287
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 288,
+      "stop": 288
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 289,
+      "stop": 289
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 290,
+      "stop": 290
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 291,
+      "stop": 291
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 292,
+      "stop": 292
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 293,
+      "stop": 293
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 294,
+      "stop": 294
+    },
+    {
+      "type": 178,
+      "text": "\"Grade: C\"",
+      "start": 295,
+      "stop": 304
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 305,
+      "stop": 309
+    },
+    {
+      "type": 53,
+      "text": "else",
+      "start": 310,
+      "stop": 313
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 314,
+      "stop": 314
+    },
+    {
+      "type": 51,
+      "text": "if",
+      "start": 315,
+      "stop": 316
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 317,
+      "stop": 317
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 318,
+      "stop": 318
+    },
+    {
+      "type": 189,
+      "text": "score",
+      "start": 319,
+      "stop": 323
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 324,
+      "stop": 324
+    },
+    {
+      "type": 28,
+      "text": "\u003e\u003d",
+      "start": 325,
+      "stop": 326
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 327,
+      "stop": 327
+    },
+    {
+      "type": 187,
+      "text": "60",
+      "start": 328,
+      "stop": 329
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 330,
+      "stop": 330
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 331,
+      "stop": 331
+    },
+    {
+      "type": 52,
+      "text": "then",
+      "start": 332,
+      "stop": 335
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 336,
+      "stop": 344
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 345,
+      "stop": 349
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 350,
+      "stop": 350
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 351,
+      "stop": 351
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 352,
+      "stop": 352
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 353,
+      "stop": 353
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 354,
+      "stop": 354
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 355,
+      "stop": 355
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 356,
+      "stop": 356
+    },
+    {
+      "type": 178,
+      "text": "\"Grade: D\"",
+      "start": 357,
+      "stop": 366
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 367,
+      "stop": 371
+    },
+    {
+      "type": 53,
+      "text": "else",
+      "start": 372,
+      "stop": 375
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 376,
+      "stop": 384
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 385,
+      "stop": 389
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 390,
+      "stop": 390
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 391,
+      "stop": 391
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 392,
+      "stop": 392
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 393,
+      "stop": 393
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 394,
+      "stop": 394
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 395,
+      "stop": 395
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 396,
+      "stop": 396
+    },
+    {
+      "type": 178,
+      "text": "\"Grade: F\"",
+      "start": 397,
+      "stop": 406
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 407,
+      "stop": 411
+    },
+    {
+      "type": 12,
+      "text": "end",
+      "start": 412,
+      "stop": 414
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 415,
+      "stop": 415
+    },
+    {
+      "type": 51,
+      "text": "if",
+      "start": 416,
+      "stop": 417
+    },
+    {
+      "type": 119,
+      "text": "\n",
+      "start": 418,
+      "stop": 418
+    },
+    {
+      "type": 12,
+      "text": "end",
+      "start": 419,
+      "stop": 421
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 422,
+      "stop": 422
+    },
+    {
+      "type": 5,
+      "text": "program",
+      "start": 423,
+      "stop": 429
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 430,
+      "stop": 430
+    },
+    {
+      "type": 189,
+      "text": "MultiBranchIf",
+      "start": 431,
+      "stop": 443
+    },
+    {
+      "type": 119,
+      "text": "\n",
+      "start": 444,
+      "stop": 444
+    },
+    {
+      "type": -1,
+      "text": "\u003cEOF\u003e",
+      "start": 445,
+      "stop": 444
+    }
+  ],
+  "startLineNumber": 1,
+  "parserClassName": "Fortran90Parser"
+}

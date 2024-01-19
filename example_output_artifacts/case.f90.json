@@ -1,0 +1,704 @@
+{
+  "fortranSourceFile": "source/fortran_code_samples/case.f90",
+  "tokenEndNumber": 114,
+  "antlr4ParseTreeString": "(program (executableProgram (programUnit (mainProgram (programStmt program Case) (mainRange (body (bodyConstruct (specificationPartConstruct (implicitStmt implicit none))) (bodyConstruct (specificationPartConstruct (declarationConstruct (typeDeclarationStmt (typeSpec integer) :: (entityDeclList (entityDecl (objectName choice))))))) (bodyConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Enter a choice (1, 2, or 3):\"))))))))))))))))) (bodyConstruct (executableConstruct (actionStmt (readStmt read (rdCtlSpec ( (rdIoCtlSpecList (unitIdentifier *) , (formatIdentifier *)) )) (inputItemList (inputItem (nameDataRef choice))))))) (bodyConstruct (executableConstruct (caseConstruct select case ( (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (nameDataRef choice))))))))))))) ) (selectCaseRange (selectCaseBody (selectCaseBody (selectCaseBody (selectCaseBody (selectCaseBody (selectCaseBody (selectCaseBody (selectCaseBody (caseStmt case (caseSelector ( (caseValueRangeList (caseValueRange (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 1))))))))))))))) )))) (caseBodyConstruct (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"You selected option 1\"))))))))))))))))))) (caseBodyConstruct (caseStmt case (caseSelector ( (caseValueRangeList (caseValueRange (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 2))))))))))))))) ))))) (caseBodyConstruct (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"You selected option 2\"))))))))))))))))))) (caseBodyConstruct (caseStmt case (caseSelector ( (caseValueRangeList (caseValueRange (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary (unsignedArithmeticConstant 3))))))))))))))) ))))) (caseBodyConstruct (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"You selected option 3\"))))))))))))))))))) (caseBodyConstruct (caseStmt case (caseSelector default)))) (caseBodyConstruct (executionPartConstruct (executableConstruct (actionStmt (writeStmt write ( (ioControlSpecList (unitIdentifier *) , (formatIdentifier *)) ) (outputItemList (expression (level5Expr (equivOperand (orOperand (andOperand (level4Expr (level3Expr (level2Expr (addOperand (multOperand (level1Expr (primary \"Invalid choice\"))))))))))))))))))) (endSelectStmt end select)))))) (endProgramStmt end)))) (programUnit (mainProgram (programStmt program Case) mainRange))) \u003cEOF\u003e)",
+  "tokenStartNumber": 0,
+  "lexerClassName": "Fortran90Lexer",
+  "endLineNumber": 19,
+  "tokensString": "[@0,0:6\u003d\u0027program\u0027,\u003c5\u003e,1:0]\n[@1,7:7\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,1:7]\n[@2,8:11\u003d\u0027Case\u0027,\u003c65\u003e,1:8]\n[@3,12:16\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,1:12]\n[@4,17:24\u003d\u0027implicit\u0027,\u003c41\u003e,2:4]\n[@5,25:25\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,2:12]\n[@6,26:29\u003d\u0027none\u0027,\u003c42\u003e,2:13]\n[@7,30:34\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,2:17]\n[@8,35:41\u003d\u0027integer\u0027,\u003c169\u003e,3:4]\n[@9,42:42\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,3:11]\n[@10,43:44\u003d\u0027::\u0027,\u003c30\u003e,3:12]\n[@11,45:45\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,3:14]\n[@12,46:51\u003d\u0027choice\u0027,\u003c189\u003e,3:15]\n[@13,52:57\u003d\u0027\\n\\n    \u0027,\u003c119\u003e,channel\u003d1,3:21]\n[@14,58:62\u003d\u0027write\u0027,\u003c72\u003e,5:4]\n[@15,63:63\u003d\u0027(\u0027,\u003c123\u003e,5:9]\n[@16,64:64\u003d\u0027*\u0027,\u003c193\u003e,5:10]\n[@17,65:65\u003d\u0027,\u0027,\u003c122\u003e,5:11]\n[@18,66:66\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:12]\n[@19,67:67\u003d\u0027*\u0027,\u003c193\u003e,5:13]\n[@20,68:68\u003d\u0027)\u0027,\u003c128\u003e,5:14]\n[@21,69:69\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,5:15]\n[@22,70:99\u003d\u0027\"Enter a choice (1, 2, or 3):\"\u0027,\u003c178\u003e,5:16]\n[@23,100:104\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,5:46]\n[@24,105:108\u003d\u0027read\u0027,\u003c73\u003e,6:4]\n[@25,109:109\u003d\u0027(\u0027,\u003c123\u003e,6:8]\n[@26,110:110\u003d\u0027*\u0027,\u003c193\u003e,6:9]\n[@27,111:111\u003d\u0027,\u0027,\u003c122\u003e,6:10]\n[@28,112:112\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,6:11]\n[@29,113:113\u003d\u0027*\u0027,\u003c193\u003e,6:12]\n[@30,114:114\u003d\u0027)\u0027,\u003c128\u003e,6:13]\n[@31,115:115\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,6:14]\n[@32,116:121\u003d\u0027choice\u0027,\u003c189\u003e,6:15]\n[@33,122:127\u003d\u0027\\n\\n    \u0027,\u003c119\u003e,channel\u003d1,6:21]\n[@34,128:133\u003d\u0027select\u0027,\u003c64\u003e,8:4]\n[@35,134:134\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,8:10]\n[@36,135:138\u003d\u0027case\u0027,\u003c65\u003e,8:11]\n[@37,139:139\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,8:15]\n[@38,140:140\u003d\u0027(\u0027,\u003c123\u003e,8:16]\n[@39,141:146\u003d\u0027choice\u0027,\u003c189\u003e,8:17]\n[@40,147:147\u003d\u0027)\u0027,\u003c128\u003e,8:23]\n[@41,148:152\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,8:24]\n[@42,153:156\u003d\u0027case\u0027,\u003c65\u003e,9:4]\n[@43,157:157\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,9:8]\n[@44,158:158\u003d\u0027(\u0027,\u003c123\u003e,9:9]\n[@45,159:159\u003d\u00271\u0027,\u003c187\u003e,9:10]\n[@46,160:160\u003d\u0027)\u0027,\u003c128\u003e,9:11]\n[@47,161:169\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,9:12]\n[@48,170:174\u003d\u0027write\u0027,\u003c72\u003e,10:8]\n[@49,175:175\u003d\u0027(\u0027,\u003c123\u003e,10:13]\n[@50,176:176\u003d\u0027*\u0027,\u003c193\u003e,10:14]\n[@51,177:177\u003d\u0027,\u0027,\u003c122\u003e,10:15]\n[@52,178:178\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:16]\n[@53,179:179\u003d\u0027*\u0027,\u003c193\u003e,10:17]\n[@54,180:180\u003d\u0027)\u0027,\u003c128\u003e,10:18]\n[@55,181:181\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,10:19]\n[@56,182:204\u003d\u0027\"You selected option 1\"\u0027,\u003c178\u003e,10:20]\n[@57,205:209\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,10:43]\n[@58,210:213\u003d\u0027case\u0027,\u003c65\u003e,11:4]\n[@59,214:214\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,11:8]\n[@60,215:215\u003d\u0027(\u0027,\u003c123\u003e,11:9]\n[@61,216:216\u003d\u00272\u0027,\u003c187\u003e,11:10]\n[@62,217:217\u003d\u0027)\u0027,\u003c128\u003e,11:11]\n[@63,218:226\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,11:12]\n[@64,227:231\u003d\u0027write\u0027,\u003c72\u003e,12:8]\n[@65,232:232\u003d\u0027(\u0027,\u003c123\u003e,12:13]\n[@66,233:233\u003d\u0027*\u0027,\u003c193\u003e,12:14]\n[@67,234:234\u003d\u0027,\u0027,\u003c122\u003e,12:15]\n[@68,235:235\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:16]\n[@69,236:236\u003d\u0027*\u0027,\u003c193\u003e,12:17]\n[@70,237:237\u003d\u0027)\u0027,\u003c128\u003e,12:18]\n[@71,238:238\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,12:19]\n[@72,239:261\u003d\u0027\"You selected option 2\"\u0027,\u003c178\u003e,12:20]\n[@73,262:266\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,12:43]\n[@74,267:270\u003d\u0027case\u0027,\u003c65\u003e,13:4]\n[@75,271:271\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,13:8]\n[@76,272:272\u003d\u0027(\u0027,\u003c123\u003e,13:9]\n[@77,273:273\u003d\u00273\u0027,\u003c187\u003e,13:10]\n[@78,274:274\u003d\u0027)\u0027,\u003c128\u003e,13:11]\n[@79,275:283\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,13:12]\n[@80,284:288\u003d\u0027write\u0027,\u003c72\u003e,14:8]\n[@81,289:289\u003d\u0027(\u0027,\u003c123\u003e,14:13]\n[@82,290:290\u003d\u0027*\u0027,\u003c193\u003e,14:14]\n[@83,291:291\u003d\u0027,\u0027,\u003c122\u003e,14:15]\n[@84,292:292\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:16]\n[@85,293:293\u003d\u0027*\u0027,\u003c193\u003e,14:17]\n[@86,294:294\u003d\u0027)\u0027,\u003c128\u003e,14:18]\n[@87,295:295\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,14:19]\n[@88,296:318\u003d\u0027\"You selected option 3\"\u0027,\u003c178\u003e,14:20]\n[@89,319:323\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,14:43]\n[@90,324:327\u003d\u0027case\u0027,\u003c65\u003e,15:4]\n[@91,328:328\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,15:8]\n[@92,329:335\u003d\u0027default\u0027,\u003c66\u003e,15:9]\n[@93,336:344\u003d\u0027\\n        \u0027,\u003c119\u003e,channel\u003d1,15:16]\n[@94,345:349\u003d\u0027write\u0027,\u003c72\u003e,16:8]\n[@95,350:350\u003d\u0027(\u0027,\u003c123\u003e,16:13]\n[@96,351:351\u003d\u0027*\u0027,\u003c193\u003e,16:14]\n[@97,352:352\u003d\u0027,\u0027,\u003c122\u003e,16:15]\n[@98,353:353\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,16:16]\n[@99,354:354\u003d\u0027*\u0027,\u003c193\u003e,16:17]\n[@100,355:355\u003d\u0027)\u0027,\u003c128\u003e,16:18]\n[@101,356:356\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,16:19]\n[@102,357:372\u003d\u0027\"Invalid choice\"\u0027,\u003c178\u003e,16:20]\n[@103,373:377\u003d\u0027\\n    \u0027,\u003c119\u003e,channel\u003d1,16:36]\n[@104,378:380\u003d\u0027end\u0027,\u003c12\u003e,17:4]\n[@105,381:381\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,17:7]\n[@106,382:387\u003d\u0027select\u0027,\u003c64\u003e,17:8]\n[@107,388:388\u003d\u0027\\n\u0027,\u003c119\u003e,channel\u003d1,17:14]\n[@108,389:391\u003d\u0027end\u0027,\u003c12\u003e,18:0]\n[@109,392:392\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,18:3]\n[@110,393:399\u003d\u0027program\u0027,\u003c5\u003e,18:4]\n[@111,400:400\u003d\u0027 \u0027,\u003c119\u003e,channel\u003d1,18:11]\n[@112,401:404\u003d\u0027Case\u0027,\u003c65\u003e,18:12]\n[@113,405:405\u003d\u0027\\n\u0027,\u003c119\u003e,channel\u003d1,18:16]\n[@114,406:405\u003d\u0027\u003cEOF\u003e\u0027,\u003c-1\u003e,19:0]\n",
+  "tokenCount": 115,
+  "tokens": [
+    {
+      "type": 5,
+      "text": "program",
+      "start": 0,
+      "stop": 6
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 7,
+      "stop": 7
+    },
+    {
+      "type": 65,
+      "text": "Case",
+      "start": 8,
+      "stop": 11
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 12,
+      "stop": 16
+    },
+    {
+      "type": 41,
+      "text": "implicit",
+      "start": 17,
+      "stop": 24
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 25,
+      "stop": 25
+    },
+    {
+      "type": 42,
+      "text": "none",
+      "start": 26,
+      "stop": 29
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 30,
+      "stop": 34
+    },
+    {
+      "type": 169,
+      "text": "integer",
+      "start": 35,
+      "stop": 41
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 42,
+      "stop": 42
+    },
+    {
+      "type": 30,
+      "text": "::",
+      "start": 43,
+      "stop": 44
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 45,
+      "stop": 45
+    },
+    {
+      "type": 189,
+      "text": "choice",
+      "start": 46,
+      "stop": 51
+    },
+    {
+      "type": 119,
+      "text": "\n\n    ",
+      "start": 52,
+      "stop": 57
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 58,
+      "stop": 62
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 63,
+      "stop": 63
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 64,
+      "stop": 64
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 65,
+      "stop": 65
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 66,
+      "stop": 66
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 67,
+      "stop": 67
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 68,
+      "stop": 68
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 69,
+      "stop": 69
+    },
+    {
+      "type": 178,
+      "text": "\"Enter a choice (1, 2, or 3):\"",
+      "start": 70,
+      "stop": 99
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 100,
+      "stop": 104
+    },
+    {
+      "type": 73,
+      "text": "read",
+      "start": 105,
+      "stop": 108
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 109,
+      "stop": 109
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 110,
+      "stop": 110
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 111,
+      "stop": 111
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 112,
+      "stop": 112
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 113,
+      "stop": 113
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 114,
+      "stop": 114
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 115,
+      "stop": 115
+    },
+    {
+      "type": 189,
+      "text": "choice",
+      "start": 116,
+      "stop": 121
+    },
+    {
+      "type": 119,
+      "text": "\n\n    ",
+      "start": 122,
+      "stop": 127
+    },
+    {
+      "type": 64,
+      "text": "select",
+      "start": 128,
+      "stop": 133
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 134,
+      "stop": 134
+    },
+    {
+      "type": 65,
+      "text": "case",
+      "start": 135,
+      "stop": 138
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 139,
+      "stop": 139
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 140,
+      "stop": 140
+    },
+    {
+      "type": 189,
+      "text": "choice",
+      "start": 141,
+      "stop": 146
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 147,
+      "stop": 147
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 148,
+      "stop": 152
+    },
+    {
+      "type": 65,
+      "text": "case",
+      "start": 153,
+      "stop": 156
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 157,
+      "stop": 157
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 158,
+      "stop": 158
+    },
+    {
+      "type": 187,
+      "text": "1",
+      "start": 159,
+      "stop": 159
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 160,
+      "stop": 160
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 161,
+      "stop": 169
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 170,
+      "stop": 174
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 175,
+      "stop": 175
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 176,
+      "stop": 176
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 177,
+      "stop": 177
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 178,
+      "stop": 178
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 179,
+      "stop": 179
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 180,
+      "stop": 180
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 181,
+      "stop": 181
+    },
+    {
+      "type": 178,
+      "text": "\"You selected option 1\"",
+      "start": 182,
+      "stop": 204
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 205,
+      "stop": 209
+    },
+    {
+      "type": 65,
+      "text": "case",
+      "start": 210,
+      "stop": 213
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 214,
+      "stop": 214
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 215,
+      "stop": 215
+    },
+    {
+      "type": 187,
+      "text": "2",
+      "start": 216,
+      "stop": 216
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 217,
+      "stop": 217
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 218,
+      "stop": 226
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 227,
+      "stop": 231
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 232,
+      "stop": 232
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 233,
+      "stop": 233
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 234,
+      "stop": 234
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 235,
+      "stop": 235
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 236,
+      "stop": 236
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 237,
+      "stop": 237
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 238,
+      "stop": 238
+    },
+    {
+      "type": 178,
+      "text": "\"You selected option 2\"",
+      "start": 239,
+      "stop": 261
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 262,
+      "stop": 266
+    },
+    {
+      "type": 65,
+      "text": "case",
+      "start": 267,
+      "stop": 270
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 271,
+      "stop": 271
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 272,
+      "stop": 272
+    },
+    {
+      "type": 187,
+      "text": "3",
+      "start": 273,
+      "stop": 273
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 274,
+      "stop": 274
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 275,
+      "stop": 283
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 284,
+      "stop": 288
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 289,
+      "stop": 289
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 290,
+      "stop": 290
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 291,
+      "stop": 291
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 292,
+      "stop": 292
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 293,
+      "stop": 293
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 294,
+      "stop": 294
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 295,
+      "stop": 295
+    },
+    {
+      "type": 178,
+      "text": "\"You selected option 3\"",
+      "start": 296,
+      "stop": 318
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 319,
+      "stop": 323
+    },
+    {
+      "type": 65,
+      "text": "case",
+      "start": 324,
+      "stop": 327
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 328,
+      "stop": 328
+    },
+    {
+      "type": 66,
+      "text": "default",
+      "start": 329,
+      "stop": 335
+    },
+    {
+      "type": 119,
+      "text": "\n        ",
+      "start": 336,
+      "stop": 344
+    },
+    {
+      "type": 72,
+      "text": "write",
+      "start": 345,
+      "stop": 349
+    },
+    {
+      "type": 123,
+      "text": "(",
+      "start": 350,
+      "stop": 350
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 351,
+      "stop": 351
+    },
+    {
+      "type": 122,
+      "text": ",",
+      "start": 352,
+      "stop": 352
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 353,
+      "stop": 353
+    },
+    {
+      "type": 193,
+      "text": "*",
+      "start": 354,
+      "stop": 354
+    },
+    {
+      "type": 128,
+      "text": ")",
+      "start": 355,
+      "stop": 355
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 356,
+      "stop": 356
+    },
+    {
+      "type": 178,
+      "text": "\"Invalid choice\"",
+      "start": 357,
+      "stop": 372
+    },
+    {
+      "type": 119,
+      "text": "\n    ",
+      "start": 373,
+      "stop": 377
+    },
+    {
+      "type": 12,
+      "text": "end",
+      "start": 378,
+      "stop": 380
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 381,
+      "stop": 381
+    },
+    {
+      "type": 64,
+      "text": "select",
+      "start": 382,
+      "stop": 387
+    },
+    {
+      "type": 119,
+      "text": "\n",
+      "start": 388,
+      "stop": 388
+    },
+    {
+      "type": 12,
+      "text": "end",
+      "start": 389,
+      "stop": 391
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 392,
+      "stop": 392
+    },
+    {
+      "type": 5,
+      "text": "program",
+      "start": 393,
+      "stop": 399
+    },
+    {
+      "type": 119,
+      "text": " ",
+      "start": 400,
+      "stop": 400
+    },
+    {
+      "type": 65,
+      "text": "Case",
+      "start": 401,
+      "stop": 404
+    },
+    {
+      "type": 119,
+      "text": "\n",
+      "start": 405,
+      "stop": 405
+    },
+    {
+      "type": -1,
+      "text": "\u003cEOF\u003e",
+      "start": 406,
+      "stop": 405
+    }
+  ],
+  "startLineNumber": 1,
+  "parserClassName": "Fortran90Parser"
+}

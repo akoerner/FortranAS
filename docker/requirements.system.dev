@@ -1,0 +1,41 @@
+## Java build requirements
+maven 
+
+## Fortran AS requirements
+build-essential 
+zlib1g-dev 
+libncurses5-dev 
+libgdbm-dev 
+libnss3-dev 
+libssl-dev 
+libreadline-dev 
+libffi-dev 
+libsqlite3-dev 
+wget 
+libbz2-dev
+procps
+bc
+
+## Visualization and file conversation requirements
+python3 
+python3-pip 
+python3-networkx
+## GraphViz is built and installed via source package, the version provided by debian is old
+#graphviz 
+#libgraphviz-dev
+imagemagick 
+#librsvg
+
+
+## Requirements needed to build graphviz
+build-essential 
+autoconf 
+automake 
+bison 
+flex 
+libtool 
+pkg-config 
+tcl-dev
+libexpat1-dev
+
+wget

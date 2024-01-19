@@ -1,0 +1,7 @@
+[submodule "antlr4/grammars-v4"]
+	path = antlr4/grammars-v4
+	url = https://github.com/antlr/grammars-v4.git
+    ignore = dirty
+[submodule "antlr4/antlr4"]
+	path = antlr4/antlr4
+	url = https://github.com/antlr/antlr4.git

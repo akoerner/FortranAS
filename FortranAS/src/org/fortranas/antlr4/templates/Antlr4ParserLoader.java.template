@@ -1,0 +1,73 @@
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.*;
+
+import java.io.*;
+import java.nio.file.*;
+
+import java.util.List;
+
+import java.lang.reflect.Constructor;
+import java.net.URLClassLoader;
+import java.net.URL;
+
+
+import java.net.URI;
+import javax.tools.JavaCompiler;
+import javax.tools.ToolProvider;
+import java.lang.reflect.Constructor;
+
+
+public class Antlr4ParserLoader {
+   
+    public static Parser loadParser(String parserClassName, Lexer lexer) throws Exception {
+        Class<?> parserClass = Class.forName(parserClassName);
+        CommonTokenStream tokenStream = new CommonTokenStream(lexer); 
+        Constructor<?> constructor = parserClass.getConstructor(TokenStream.class);
+        Parser parser = (Parser) constructor.newInstance(tokenStream);
+
+        parser.removeErrorListeners();
+        parser.addErrorListener(new ContinueOnTokenErrorListener());
+
+        //parser.setErrorHandler(new ContinueOnTokenErrorStrategy());
+        return parser;
+    }
+
+    static Parser loadParser_(String parserClassName, Lexer lexer) {
+        
+        CommonTokenStream tokenStream = new CommonTokenStream(lexer); 
+ 
+        try {
+            String searchPath = "/app/src/main/java/";
+            String parserClassFileName = parserClassName + ".java";
+            String sourceFilePath = FileTools.find(searchPath, parserClassFileName);
+
+            JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+            int compilationResult = compiler.run(null, null, null, sourceFilePath);
+
+            if (compilationResult == 0) {
+                URLClassLoader classLoader = new URLClassLoader(new URL[]{new File("/app/src/main/java/").toURI().toURL()});
+
+
+                Class<?> parserClass = classLoader.loadClass(parserClassName);
+                Constructor<?> constructor = parserClass.getConstructor(TokenStream.class);
+                Parser parser = (Parser) constructor.newInstance(tokenStream);
+                return parser;
+            } else {
+                System.err.println("Compilation failed for " + parserClassName);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public static ParseTree getParseTree(Parser parser){
+        ParseTree parseTree = null;
+        //_FORTRAN_PARSERS_//
+
+        return parseTree;
+
+    }
+
+}
