@@ -1,12 +1,15 @@
 # Basic Usage
 
-This section will provide a guide on the basic usage of **FortranAS**.
+This section will provide a guide on the basic usage of **FortranAS** for
+running with a locally installed JRE and with the provided Docker runtime
+context.
 
 ## Running **FortranAS** 
 
 Grab the latest release: [https://github.com/akoerner/FortranAS/releases](https://github.com/akoerner/FortranAS/releases)
 
 ### Prerequisites
+The following prerequisites must be installed in order to run **FortranAS**:
 - Install JRE 19+
 - Install GraphViz (for DOT file conversion to SVG and PNG)
 - Install `unifdef` command line tool 
