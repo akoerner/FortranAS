@@ -24,15 +24,14 @@ if ! [[ -x "$(command -v java)" ]]; then
     exiterr "ERROR: JAVA is not installed. Please install Java and try again."
 fi
 
-java_version=$(java -version 2>&1 | grep -i version | awk '{print $3}' | tr -d '"')
-java_major_version=$(echo "$java_version" | cut -d'.' -f1)
+java_version=$(java -version 2>&1 | grep -i version | awk '{print $3}' | tr -d '"' | cut -d'.' -f1 | cut -d'-' -f1)
 
 if [ -z "$java_version" ]; then
-  exiterr "ERROR: Unable to determine Java version. Install a JRE and try again."
+    exiterr "ERROR: Unable to determine Java version. Install a JRE and try again."
 fi
 
-if [ "$java_major_version" -lt ${MINIMUM_JAVA_VERSION} ]; then
-  exiterr "ERROR: Java version >=${MINIMUM_JAVA_VERSION} required. Current version: $java_version"
+if [ "$java_version" -lt ${MINIMUM_JAVA_VERSION} ]; then
+    exiterr "ERROR: Java version >=${MINIMUM_JAVA_VERSION} required. Current version: $java_version"
 fi
 
 kill -15 $(ps -ef | grep FortranAS | grep ".jar" | awk '{print $2}') > /dev/null 2>&1 || true 
